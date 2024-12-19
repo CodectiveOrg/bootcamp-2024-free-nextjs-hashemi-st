@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Vazirmatn } from 'next/font/google';
+import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 
 const vazirmatn = Vazirmatn({
-  subsets: ['latin','arabic'],
-  display: 'swap',
-})
+  subsets: ["latin", "arabic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "چکاپ فایند",
-  description:"پلتفرم جامع جستجوی دکتر و رزرو نوبت آنلاین",
+  description: "پلتفرم جامع جستجوی دکتر و رزرو نوبت آنلاین",
 };
 
 export default function RootLayout({
@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
