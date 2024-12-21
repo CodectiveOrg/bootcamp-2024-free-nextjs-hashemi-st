@@ -8,7 +8,7 @@ export default async function Home() {
     <div className={styles.home}>
       <h1>
         <Logo />
-         چکاپ &nbsp;فایند 
+        چکاپ &nbsp;فایند
       </h1>
       <GlobalSearchBoxComponent />
       <div className={styles.history}>
@@ -19,5 +19,5 @@ export default async function Home() {
         </ul>
       </div>
     </div>
-  )
+  );
 }

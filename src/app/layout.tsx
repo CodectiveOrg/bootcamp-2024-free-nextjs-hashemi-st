@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
       <body>
-        <HeaderComponent/>
+        <HeaderComponent />
         <main>{children}</main>
         <p className="tagline">
           نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
         </p>
-        <FooterComponent/>
+        <FooterComponent />
       </body>
     </html>
   );
