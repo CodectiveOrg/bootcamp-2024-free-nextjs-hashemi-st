@@ -1,6 +1,6 @@
 'use client'
 
-type menuItems = { href: string, title: string }
+type menuItems = {id: number, href: string, title: string }
 
 import { ReactElement } from "react";
 
@@ -17,10 +17,10 @@ export default function HeaderComponent(): ReactElement {
 
     const menuItems: menuItems[] =
         [
-            { href: "", title: "خانه" },
-            { href: "search", title: "جستجو" },
-            { href: "about", title: "درباره ما" },
-            { href: "contact", title: "تماس با ما" },
+            { id: 1, href: "", title: "خانه" },
+            { id: 2, href: "search", title: "جستجو" },
+            { id: 3, href: "about", title: "درباره ما" },
+            { id: 4, href: "contact", title: "تماس با ما" },
         ]
     return (
         <header className={styles.header}>
@@ -28,7 +28,7 @@ export default function HeaderComponent(): ReactElement {
                 <ul>
                     {
                         menuItems.map(menuItem =>
-                            <li>
+                            <li key={menuItem.id}>
                                 <Link href={`/${menuItem.href}`} className={clsx(pathname === `/${menuItem.href}` && styles.active)}>
                                     {menuItem.title}
                                 </Link>

@@ -1,6 +1,4 @@
-import React, { SVGProps } from "react";
-
-export function Logo(props: SVGProps<SVGSVGElement>) {
+export function Logo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
