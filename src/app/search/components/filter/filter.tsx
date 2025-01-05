@@ -82,11 +82,11 @@ export default function Filter() {
                 <div>جنسیت :</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="radio" id="man" value="man" />
+                        <input type="radio" name="gender" value="man" />
                         مرد
                     </label>
                     <label>
-                        <input type="radio" id="woman" value="woman" />
+                        <input type="radio" name="gender" value="woman" />
                         زن
                     </label>
                 </div>
@@ -96,15 +96,15 @@ export default function Filter() {
                 <div>امتیاز</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="radio" value="man" />
+                        <input type="radio" name="point" value="upper4" />
                         بالای 4
                     </label>
                     <label>
-                        <input type="radio" value="woman" />
+                        <input type="radio" name="point" value="3to4" />
                         3 تا 4
                     </label>
                     <label>
-                        <input type="radio" value="woman" />
+                        <input type="radio" name="point" value="under3" />
                         زیر 3
                     </label>
                 </div>
@@ -113,12 +113,12 @@ export default function Filter() {
                 <div>سایر</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="radio" value="man" />
+                        <input type="checkbox" name="trait" value="nice" />
                         خوش برخورد
                     </label>
                     <label>
-                        <input type="radio" value="woman" />
-                        بدون معطلی
+                        <input type="checkbox" name="trait" value="soon" />
+                        کمترین معطلی
                     </label>
                 </div>
             </div>
