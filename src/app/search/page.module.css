@@ -7,8 +7,9 @@
   
     .filters {
       display: grid;
-      gap: 1rem;
       border: 1px solid #ccc;
+      border-radius: 5px;
+      min-height: 100vh;
     }
   }
   
