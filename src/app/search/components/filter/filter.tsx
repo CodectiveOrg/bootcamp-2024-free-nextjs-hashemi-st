@@ -13,15 +13,22 @@ export default function Filter() {
                 </div>
                 <div className={styles.labels}>
                     <div className={styles.label}>
-                        <div>قلب</div><span>X</span>
+                        <span>قلب</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
+                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </div>
                     <div className={styles.label}>
-                        <div>تهران</div><span>X</span>
-                    </div>
+                        <span>تهران</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
+                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>                    </div>
                     <div className={styles.label}>
-                        <div>مرد</div><span>X</span>
+                        <span>مرد</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
+                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </div>
-
                 </div>
             </div>
 

@@ -45,14 +45,7 @@
             align-items: center;
 
             & span {
-                border: 1px solid var(--color-red);
-                width: 19px;
-                height: 19px;
-                border-radius: 100%;
-                text-align: center;
-                line-height: 21px;
-                cursor: pointer;
-                color: var(--color-red);
+padding: 4px;
             }
         }
     }
