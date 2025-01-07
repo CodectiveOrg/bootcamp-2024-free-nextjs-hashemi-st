@@ -1,17 +1,25 @@
 .page {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: start;
-    gap: 1rem;
-    margin-block-end: 2rem;
-  
-    .filters {
-      display: grid;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      min-height: 100vh;
-    }
+  display: flex;
+  gap: 1rem;
+  margin-block-end: 2rem;
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 100vh;
   }
-  
-  
-  
+   .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+  }
+}
+
+@media(max-width:686px) {
+  .page {
+    flex-direction: column;
+  }
+}
