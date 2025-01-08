@@ -9,21 +9,25 @@
     border: 1px solid grey;
     border-radius: 5px;
     padding: .5rem;
-    min-height: 100px;
     margin-bottom: 20px;
 
     & .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         & .delete {
             cursor: pointer;
-            text-decoration: underline;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background:  var(--color-red);
+            width: 100%;
         }
 
         & .delete:hover {
-            color: var(--color-red)
+            background:var(--color-yellow);
+            color: var(--color-gray-12)
         }
     }
 

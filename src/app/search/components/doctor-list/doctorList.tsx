@@ -7,7 +7,7 @@ import styles from "./doctorList.module.css";
 export default function DoctorList() {
 
     const { filters } = useContext(FiltersContext);
-
+    
     const filteredList = doctors.filter((doctor) => {
 
         const isFilterActive =

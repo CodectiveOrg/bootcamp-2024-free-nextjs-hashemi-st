@@ -22,16 +22,15 @@ const showBadge = (badge: string) => {
 
         default:
             return <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="1em" role="img">
-                <path d="M8 2v3m8-3v3M3.5 9.09h17m.5-.59V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2v3m8-3v3M3.5 9.09h17m.5-.59V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round">
                 </path>
-                <path d="M15.695 13.7h.009m-.009 3h.009m-3.709-3h.01m-.01 3h.01m-3.711-3h.01m-.01 3h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.695 13.7h.009m-.009 3h.009m-3.709-3h.01m-.01 3h.01m-3.711-3h.01m-.01 3h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 </path>
             </svg>
     }
-
 }
+
 export default function Item({ list }: ItemProps): ReactElement {
-    console.log('hhhh', list)
     return (
         <>
             {list.length? list.map(li => (
@@ -74,8 +73,8 @@ export default function Item({ list }: ItemProps): ReactElement {
                         </div>
                         <div className={styles.wrapperTags}>
                             {li.badges ?
-                                li.badges.map(badge => (
-                                    <div className={styles.trait}>
+                                li.badges.map((badge, _i) => (
+                                    <div key={_i} className={styles.trait}>
                                         {showBadge(badge)}
                                        <span> {badge}</span>
                                     </div>)) : null}

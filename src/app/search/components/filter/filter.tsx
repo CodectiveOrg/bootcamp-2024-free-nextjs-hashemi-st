@@ -1,14 +1,15 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { FiltersContext } from '@/app/search/providers/filters.providers';
 import styles from "./filter.module.css";
 
 export default function Filter() {
 
-    const { filters, changeFilter } = useContext(FiltersContext);
+    const { filters, changeFilter, clearAll } = useContext(FiltersContext);
 
     const [selectedRate, setSelectedRate] = useState<string | null>(filters.rate?.toString() || null);
 
     const handleSpecialtyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        
         const { checked, value } = event.target;
 
         const currentSpecialties = filters.specialty || [];
@@ -36,18 +37,18 @@ export default function Filter() {
         const value = e.target.value;
 
         if (value === "upper4") {
-            changeFilter("rate", { min: 4 });   
+            changeFilter("rate", { min: 4 });
         }
         if (value === "under4") {
-            changeFilter("rate", { max: 4 }); 
+            changeFilter("rate", { max: 4 });
         }
-        setSelectedRate(value);   
+        setSelectedRate(value);
     };
 
     const handleTraitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, checked } = event.target;
         const currentTraits = filters.trait || [];
-    
+
         if (checked) {
             changeFilter("trait", [...currentTraits, value]);
         } else {
@@ -56,36 +57,20 @@ export default function Filter() {
                 currentTraits.filter((trait) => trait !== value)
             );
         }
-    };   
+    };
 
     return (
         <div className={styles.filterWrapper}>
             <div className={styles.selectfilterWrapper}>
                 <div className={styles.wrapper}>
-                    <span>فیلترها</span>
-                    <span className={styles.delete}>حذف همه</span>
-                </div>
-                <div className={styles.labels}>
-                    <div className={styles.label}>
-                        <span>قلب</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
-                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <div className={styles.label}>
-                        <span>تهران</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
-                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>                    </div>
-                    <div className={styles.label}>
-                        <span>مرد</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15">
-                            <path d="M4 4L20 20M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </div>
+                    {(Object.keys(filters).length > 0 && filters.constructor === Object)
+                        ?
+                        <button className={styles.delete} onClick={clearAll}>حذف فیلترها</button>
+                        :
+                        <h4 style={{ color: "var(--color-yellow)" }}>انتخاب فیلترها</h4>
+                    }
                 </div>
             </div>
-
             <div className={styles.wrapperExpert}>
                 <div className={styles.titleExpert}>تخصص :</div>
                 <div className={styles.experts}>
@@ -289,22 +274,22 @@ export default function Filter() {
                 <div>سایر</div>
                 <div className={styles.radio}>
                     <label>
-                        <input 
-                        type="checkbox" 
-                        name="trait" 
-                        value="خوش برخورد"
-                        checked={filters.trait?.includes("خوش برخورد") || false}
-                        onChange={handleTraitChange}
-                         />
+                        <input
+                            type="checkbox"
+                            name="trait"
+                            value="خوش برخورد"
+                            checked={filters.trait?.includes("خوش برخورد") || false}
+                            onChange={handleTraitChange}
+                        />
                         خوش برخورد
                     </label>
                     <label>
-                        <input 
-                        type="checkbox" 
-                        name="trait" 
-                        value="کمترین معطلی"
-                        checked={filters.trait?.includes("کمترین معطلی") || false}
-                        onChange={handleTraitChange} 
+                        <input
+                            type="checkbox"
+                            name="trait"
+                            value="کمترین معطلی"
+                            checked={filters.trait?.includes("کمترین معطلی") || false}
+                            onChange={handleTraitChange}
                         />
                         کمترین معطلی
                     </label>
