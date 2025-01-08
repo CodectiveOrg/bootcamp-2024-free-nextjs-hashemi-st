@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState } from 'react';
 import { FiltersContext } from '@/app/search/providers/filters.providers';
 import styles from "./filter.module.css";
 
@@ -7,9 +7,15 @@ export default function Filter() {
     const { filters, changeFilter, clearAll } = useContext(FiltersContext);
 
     const [selectedRate, setSelectedRate] = useState<string | null>(filters.rate?.toString() || null);
+    const [selectedCity, setSelectedCity] = useState<string>(filters.city || "");  
+
+    const handleClearAll = () => {
+        clearAll()
+        setSelectedCity("")
+    }
 
     const handleSpecialtyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        
+       
         const { checked, value } = event.target;
 
         const currentSpecialties = filters.specialty || [];
@@ -25,6 +31,7 @@ export default function Filter() {
 
     const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const value = event.target.value;
+        setSelectedCity(value);  
         changeFilter("city", value);
     };
 
@@ -65,7 +72,7 @@ export default function Filter() {
                 <div className={styles.wrapper}>
                     {(Object.keys(filters).length > 0 && filters.constructor === Object)
                         ?
-                        <button className={styles.delete} onClick={clearAll}>حذف فیلترها</button>
+                        <button className={styles.delete} onClick={handleClearAll}>حذف فیلترها</button>
                         :
                         <h4 style={{ color: "var(--color-yellow)" }}>انتخاب فیلترها</h4>
                     }
@@ -199,7 +206,7 @@ export default function Filter() {
 
             <div className={styles.wrapperCity}>
                 <div>انتخاب شهر </div>
-                <select onChange={handleCityChange} className={styles.city}>
+                <select value={selectedCity} onChange={handleCityChange} className={styles.city}>
                     <option></option>
                     <option value="اردبیل">اردبیل</option>
                     <option value="اصفهان">اصفهان</option>
