@@ -1,8 +1,24 @@
-
+import { useContext, useState } from 'react';
+import { FiltersContext } from '@/app/search/providers/filters.providers';
 import styles from "./filter.module.css";
 
-
 export default function Filter() {
+
+    const { filters, changeFilter } = useContext(FiltersContext);
+
+    const handleSpecialtyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { checked, value } = event.target;
+
+        const currentSpecialties = filters.specialty || [];
+        if (checked) {
+            changeFilter("specialty", [value]);
+        } else {
+            changeFilter(
+                "specialty",
+                currentSpecialties.filter((specialty) => specialty !== value)
+            );
+        }
+    };
 
     return (
         <div className={styles.filterWrapper}>
@@ -36,40 +52,121 @@ export default function Filter() {
                 <div className={styles.titleExpert}>تخصص :</div>
                 <div className={styles.experts}>
                     <label>
-                        <input type="checkbox" value="heart" />
-                        قلب
+                        <input
+                            type="checkbox"
+                            value="قلب و عروق"
+                            checked={filters.specialty?.includes("قلب و عروق") || false}
+                            onChange={handleSpecialtyChange}
+                        />
+                        قلب و عروق
                     </label>
                     <label>
-                        <input type="checkbox" value="brain" />
-                        مغز
+                        <input
+                            type="checkbox"
+                            value="مغز و اعصاب"
+                            checked={filters.specialty?.includes("مغز و اعصاب") || false}
+                            onChange={handleSpecialtyChange}
+                        />
+                        مغز و اعصاب
                     </label>
                     <label>
-                        <input type="checkbox" value="ear" />
-                        گوش
+                        <input 
+                        type="checkbox"
+                            value=" گفتاردرمانی "
+                            checked={filters.specialty?.includes("گفتاردرمانی") || false}
+                            onChange={handleSpecialtyChange}
+                        />
+                        گفتاردرمانی
                     </label>
                     <label>
-                        <input type="checkbox" value="eye" />
-                        چشم
+                        <input 
+                        type="checkbox"
+                        value= "چشم پزشکی"
+                        checked={filters.specialty?.includes("چشم پزشکی") || false}
+                        onChange={handleSpecialtyChange}
+                          />
+                        چشم پزشکی
                     </label>
                     <label>
-                        <input type="checkbox" value="kedney" />
-                        کلیه
+                        <input 
+                        type="checkbox"
+                         value="کودکان،اطفال و نوزادان"
+                         checked={filters.specialty?.includes("کودکان،اطفال و نوزادان") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        کودکان،اطفال و نوزادان
                     </label>
                     <label>
-                        <input type="checkbox" value="internal" />
-                        داخلی
+                        <input 
+                        type="checkbox"
+                         value="جراحی عمومی"
+                         checked={filters.specialty?.includes("جراحی عمومی") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        جراحی عمومی
                     </label>
                     <label>
-                        <input type="checkbox" value="skin" />
-                        پوست
+                        <input 
+                        type="checkbox"
+                         value="جراحی پلاستیک و زیبایی"
+                         checked={filters.specialty?.includes("جراحی پلاستیک و زیبایی") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        جراحی پلاستیک و زیبایی
                     </label>
                     <label>
-                        <input type="checkbox" value="spychology" />
-                        روانپزشکی
+                        <input 
+                        type="checkbox"
+                         value="علوم تغذیه"
+                         checked={filters.specialty?.includes("علوم تغذیه") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        علوم تغذیه
                     </label>
                     <label>
-                        <input type="checkbox" value="ortopedy" />
+                        <input 
+                        type="checkbox"
+                         value="ارتوپدی"
+                         checked={filters.specialty?.includes("ارتوپدی") || false}
+                         onChange={handleSpecialtyChange}
+                          />
                         ارتوپدی
+                    </label>
+                    <label>
+                        <input 
+                        type="checkbox"
+                         value="گوارش"
+                         checked={filters.specialty?.includes("گوارش") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        گوارش
+                    </label>
+                    <label>
+                        <input 
+                        type="checkbox"
+                         value="زنان و زایمان"
+                         checked={filters.specialty?.includes("زنان و زایمان") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        زنان و زایمان
+                    </label>
+                    <label>
+                        <input 
+                        type="checkbox"
+                         value="بیماریهای عفونی"
+                         checked={filters.specialty?.includes("بیماریهای عفونی") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        بیماریهای عفونی
+                    </label>
+                    <label>
+                        <input 
+                        type="checkbox"
+                         value="ارولوژی"
+                         checked={filters.specialty?.includes("ارولوژی") || false}
+                         onChange={handleSpecialtyChange}
+                          />
+                        ارولوژی
                     </label>
                 </div>
             </div>
