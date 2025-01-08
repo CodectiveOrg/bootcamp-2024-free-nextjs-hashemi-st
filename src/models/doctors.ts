@@ -7,13 +7,15 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/155442212a4f2d04e5514bf6f61fd686.jpg?size=150",
     isVerified: true,
-    averageRating: 4.99,
+    averageRating: 2,
     totalVotes: 294,
     address:
       "خرم آباد,خرم آباد، بین چهارراه بانک و میدان شهدا،ساختمان پزشکان مانا طبقه چهارم",
     firstAvailableAppointment: "کمتر از یک ساعت دیگر",
     brief: "متخصص گفتاردرمانی ، گفتار درمانی کودکان",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    gender: "female",
+    city: "خرم آباد"
   },
   {
     id: "e6719f23-e846-4a95-88f9-c013c5d9cb4f",
@@ -21,13 +23,15 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/75fb4a009a8ab4af3a5c4f819f1846c7.jpg?size=150",
     isVerified: true,
-    averageRating: 4.92,
+    averageRating: 3,
     totalVotes: 1487,
     address:
       "اردبیل,اردبیل، اول خیابان والی، خیابان شهیدان نوعی اقدم، نرسیده به بیمارستان امام خمینی، جنب داروخانه دکترنصیرپور",
     firstAvailableAppointment: "16 دی 11 صبح",
     brief: "متخصص بیماری‌های کودکان",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    gender: "male",
+    city: "اردبیل"
   },
   {
     id: "4a7403d4-e0a2-406c-8dea-3e557bae54d2",
@@ -35,12 +39,14 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/98c386aa9c77f7792a4b777137b9fc55.jpg?size=150",
     isVerified: true,
-    averageRating: 5,
+    averageRating: 3.5,
     totalVotes: 190,
     address: "جهرم,خیابان ۲۲ بهمن ،جنب بانک مسکن ،ساختمان حکیم ،طبقه سوم",
     firstAvailableAppointment: "15 دی 4 عصر",
     brief: "جراحی عمومی،جراحی پلاستیک و زیبایی،درمان هموروئید و فیشر و...",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    gender: "male",
+    city: "جهرم"
   },
   {
     id: "06d3a495-160d-4722-815e-286ff5d82ed2",
@@ -54,6 +60,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "13 اسفند 5 عصر",
     brief: "فوق تخصص طب نوزادی و پیرامون تولد",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 12 دی 23:59", "خوش برخورد"],
+    gender: "female",
+    city: "اصفهان"
   },
   {
     id: "7f39ff5b-4c81-4c59-80fa-7872b675bb18",
@@ -72,6 +80,8 @@ export const doctors: DoctorModel[] = [
       "خوش برخورد",
       "کمترین معطلی",
     ],
+    gender: "male",
+    city: "نیشابور"
   },
   {
     id: "1515",
@@ -84,6 +94,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "20 دی 9 صبح",
     brief: "متخصص اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 18 دی 23:59", "کمترین معطلی"],
+    gender: "female",
+    city: "بندرعباس"
   },
   {
     id: "ba7333ef-9e18-11ea-9877-005056b09c11",
@@ -91,12 +103,14 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/01fffb3a5571c71c0d23baa1703af593.jpg?size=150",
     isVerified: true,
-    averageRating: 4.95,
+    averageRating: 3.9,
     totalVotes: 423,
     address: "شیراز,خیابان زند، روبرو هتل پارس، ساختمان صدر زاده، طبقه دوم",
     firstAvailableAppointment: "15 دی 1 عصر",
     brief: "فوق تخصص بیماری‌های قلب کودکان",
     badges: ["خوش برخورد"],
+    gender: "male",
+    city: "شیراز"
   },
   {
     id: "a8a27637-9e67-11ea-9877-005056b09c11",
@@ -111,6 +125,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "19 دی 7 عصر",
     brief: "متخصص چشم پزشکی دارای بورد تخصصی",
     badges: ["خوش برخورد"],
+    gender: "male",
+    city: "قائن"
   },
   {
     id: "286439d9-617a-4d5c-a77a-e1ac0c088780",
@@ -124,6 +140,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "16 دی 4 عصر",
     brief: "فوق تخصص طب نوزادی و پیرامون تولد متخصص کودکان",
     badges: ["خوش برخورد"],
+    gender: "male",
+    city: "تهران"
   },
   {
     id: "601e14cb-c7f7-4668-b883-3c61ebd11f52",
@@ -138,6 +156,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "فردا 9 صبح",
     brief: "کارشناسی علوم تغذیه",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    gender: "male",
+    city: "مشهد"
   },
   {
     id: "4009802",
@@ -152,6 +172,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "17 دی 5 عصر",
     brief: "فوق تخصص گوارش اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 15 دی 06:00", "خوش برخورد"],
+    gender: "male",
+    city: "کاشان"
   },
   {
     id: "85882eb5-1d70-4453-9f67-2a232527590c",
@@ -166,6 +188,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "کمتر از پنج ساعت دیگر",
     brief: "فوق تخصص گوارش اطفال",
     badges: ["خوش برخورد"],
+    gender : "male",
+    city: "تهران"
   },
   {
     id: "6b59b263-73fe-4316-ae81-4fe50968a723",
@@ -179,6 +203,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "کمتر از پنج ساعت دیگر",
     brief: "متخصص بیماری‌های قلب و عروق",
     badges: ["خوش برخورد"],
+    gender: "male",
+    city: "همدان"
   },
   {
     id: "1eb139dc-42d2-4110-8a09-f04a2561372c",
@@ -189,10 +215,12 @@ export const doctors: DoctorModel[] = [
     averageRating: 4.99,
     totalVotes: 120,
     address:
-      "مشهد,مشهد، رازی غربی، میدان امام رضا ساختمان پزشکان رازی طبقه ۴. واحد ۴۰۲ صبحها بججز سه شنبه ها و مطب شماره ۲ خیابان کوهسنگی .بین کوهسنگی ۵ و ۷ . جنب فروشگاه سون. پلاک ۱۶۳ عصره بجز پنجشنبه ها",
+      "مشهد, رازی غربی، میدان امام رضا ساختمان پزشکان رازی طبقه ۴. واحد ۴۰۲ صبحها بججز سه شنبه ها و مطب شماره ۲ خیابان کوهسنگی .بین کوهسنگی ۵ و ۷ . جنب فروشگاه سون. پلاک ۱۶۳ عصره بجز پنجشنبه ها",
     firstAvailableAppointment: "کمتر از یک ساعت دیگر",
     brief: "متخصص زنان و زایمان",
     badges: ["خوش برخورد", "کمترین معطلی"],
+    gender: "female",
+    city: "مشهد"
   },
   {
     id: "7572",
@@ -207,6 +235,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "کمتر از پنج ساعت دیگر",
     brief: "متخصص بیماریهای عفونی و گرمسیری",
     badges: [],
+    gender: "male", 
+    city : "بابل"
   },
   {
     id: "4917678e-5e19-4322-b9e4-eb73e8ec622c",
@@ -221,6 +251,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "15 دی 4 عصر",
     brief: "فوق تخصص طب نوزادی و پیرامون تولد",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 13 دی 23:59", "خوش برخورد"],
+    gender: "male",
+    city: "سمنان"
   },
   {
     id: "22409",
@@ -235,6 +267,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "16 دی 4 عصر",
     brief: "متخصص بیماریهای قلب و عروق",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 15 دی 08:00", "خوش برخورد"],
+    gender: "male",
+    city: "کرمانشاه"
   },
   {
     id: "2488",
@@ -249,6 +283,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "9 فروردین 5 عصر",
     brief: "متخصص چشم پزشکی",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 9 اسفند 00:01"],
+    gender: "male",
+    city: "تهران"
   },
   {
     id: "1855",
@@ -263,6 +299,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "18 دی 6 عصر",
     brief: "متخصص قلب و عروق",
     badges: ["کمترین معطلی"],
+    gender: "male",
+    city: "تهران"
   },
   {
     id: "c1d1fa23-ec60-11ec-b214-005056ad7555",
@@ -276,5 +314,7 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "14 اردیبهشت 12 عصر",
     brief: "فلوشیپ ارولوژی اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 30 فروردین 23:59", "خوش برخورد"],
+    gender: "male",
+    city: "تهران"
   },
 ];

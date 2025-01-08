@@ -9,4 +9,6 @@ export type DoctorModel = {
     firstAvailableAppointment: string,
     brief: string,
     badges: string[],
+    gender: string,
+    city: string
 }
