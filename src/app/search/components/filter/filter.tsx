@@ -54,8 +54,8 @@ export default function Filter() {
                     <label>
                         <input
                             type="checkbox"
-                            value="قلب و عروق"
-                            checked={filters.specialty?.includes("قلب و عروق") || false}
+                            value="قلب"
+                            checked={filters.specialty?.includes("قلب") || false}
                             onChange={handleSpecialtyChange}
                         />
                         قلب و عروق
