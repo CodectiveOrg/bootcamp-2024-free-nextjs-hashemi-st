@@ -15,7 +15,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص گفتاردرمانی ، گفتار درمانی کودکان",
     badges: ["خوش برخورد", "کمترین معطلی"],
     gender: "female",
-    city: "خرم آباد"
+    city: "خرم آباد",
   },
   {
     id: "e6719f23-e846-4a95-88f9-c013c5d9cb4f",
@@ -31,7 +31,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص بیماری‌های کودکان",
     badges: ["خوش برخورد", "کمترین معطلی"],
     gender: "male",
-    city: "اردبیل"
+    city: "اردبیل",
   },
   {
     id: "4a7403d4-e0a2-406c-8dea-3e557bae54d2",
@@ -46,7 +46,7 @@ export const doctors: DoctorModel[] = [
     brief: "جراحی عمومی،جراحی پلاستیک و زیبایی،درمان هموروئید و فیشر و...",
     badges: ["خوش برخورد", "کمترین معطلی"],
     gender: "male",
-    city: "جهرم"
+    city: "جهرم",
   },
   {
     id: "06d3a495-160d-4722-815e-286ff5d82ed2",
@@ -61,7 +61,7 @@ export const doctors: DoctorModel[] = [
     brief: "فوق تخصص طب نوزادی و پیرامون تولد",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 12 دی 23:59", "خوش برخورد"],
     gender: "female",
-    city: "اصفهان"
+    city: "اصفهان",
   },
   {
     id: "7f39ff5b-4c81-4c59-80fa-7872b675bb18",
@@ -81,7 +81,7 @@ export const doctors: DoctorModel[] = [
       "کمترین معطلی",
     ],
     gender: "male",
-    city: "نیشابور"
+    city: "نیشابور",
   },
   {
     id: "1515",
@@ -95,7 +95,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 18 دی 23:59", "کمترین معطلی"],
     gender: "female",
-    city: "بندرعباس"
+    city: "بندرعباس",
   },
   {
     id: "ba7333ef-9e18-11ea-9877-005056b09c11",
@@ -110,7 +110,7 @@ export const doctors: DoctorModel[] = [
     brief: "فوق تخصص بیماری‌های قلب کودکان",
     badges: ["خوش برخورد"],
     gender: "male",
-    city: "شیراز"
+    city: "شیراز",
   },
   {
     id: "a8a27637-9e67-11ea-9877-005056b09c11",
@@ -126,7 +126,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص چشم پزشکی دارای بورد تخصصی",
     badges: ["خوش برخورد"],
     gender: "male",
-    city: "قائن"
+    city: "قائن",
   },
   {
     id: "286439d9-617a-4d5c-a77a-e1ac0c088780",
@@ -141,7 +141,7 @@ export const doctors: DoctorModel[] = [
     brief: "فوق تخصص طب نوزادی و پیرامون تولد متخصص کودکان",
     badges: ["خوش برخورد"],
     gender: "male",
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "601e14cb-c7f7-4668-b883-3c61ebd11f52",
@@ -157,7 +157,7 @@ export const doctors: DoctorModel[] = [
     brief: "کارشناسی علوم تغذیه",
     badges: ["خوش برخورد", "کمترین معطلی"],
     gender: "male",
-    city: "مشهد"
+    city: "مشهد",
   },
   {
     id: "4009802",
@@ -173,7 +173,7 @@ export const doctors: DoctorModel[] = [
     brief: "فوق تخصص گوارش اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 15 دی 06:00", "خوش برخورد"],
     gender: "male",
-    city: "کاشان"
+    city: "کاشان",
   },
   {
     id: "85882eb5-1d70-4453-9f67-2a232527590c",
@@ -188,8 +188,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "کمتر از پنج ساعت دیگر",
     brief: "فوق تخصص گوارش اطفال",
     badges: ["خوش برخورد"],
-    gender : "male",
-    city: "تهران"
+    gender: "male",
+    city: "تهران",
   },
   {
     id: "6b59b263-73fe-4316-ae81-4fe50968a723",
@@ -204,7 +204,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص بیماری‌های قلب و عروق",
     badges: ["خوش برخورد"],
     gender: "male",
-    city: "همدان"
+    city: "همدان",
   },
   {
     id: "1eb139dc-42d2-4110-8a09-f04a2561372c",
@@ -220,7 +220,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص زنان و زایمان",
     badges: ["خوش برخورد", "کمترین معطلی"],
     gender: "female",
-    city: "مشهد"
+    city: "مشهد",
   },
   {
     id: "7572",
@@ -235,8 +235,8 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "کمتر از پنج ساعت دیگر",
     brief: "متخصص بیماریهای عفونی و گرمسیری",
     badges: [],
-    gender: "male", 
-    city : "بابل"
+    gender: "male",
+    city: "بابل",
   },
   {
     id: "4917678e-5e19-4322-b9e4-eb73e8ec622c",
@@ -252,7 +252,7 @@ export const doctors: DoctorModel[] = [
     brief: "فوق تخصص طب نوزادی و پیرامون تولد",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 13 دی 23:59", "خوش برخورد"],
     gender: "male",
-    city: "سمنان"
+    city: "سمنان",
   },
   {
     id: "22409",
@@ -268,7 +268,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص بیماریهای قلب و عروق",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 15 دی 08:00", "خوش برخورد"],
     gender: "male",
-    city: "کرمانشاه"
+    city: "کرمانشاه",
   },
   {
     id: "2488",
@@ -284,7 +284,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص چشم پزشکی",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 9 اسفند 00:01"],
     gender: "male",
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "1855",
@@ -300,7 +300,7 @@ export const doctors: DoctorModel[] = [
     brief: "متخصص قلب و عروق",
     badges: ["کمترین معطلی"],
     gender: "male",
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "c1d1fa23-ec60-11ec-b214-005056ad7555",
@@ -315,6 +315,6 @@ export const doctors: DoctorModel[] = [
     brief: "فلوشیپ ارولوژی اطفال",
     badges: ["فعال شدن نوبت‌دهی اینترنتی 30 فروردین 23:59", "خوش برخورد"],
     gender: "male",
-    city: "تهران"
+    city: "تهران",
   },
 ];
