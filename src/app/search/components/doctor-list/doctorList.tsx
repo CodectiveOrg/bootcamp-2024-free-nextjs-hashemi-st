@@ -39,16 +39,24 @@ export default function DoctorList() {
         if (filters.rate) {
             const matchesRate = (
                 filters.rate.min !== undefined && filters.rate.max === undefined ?
-                doctor.averageRating > filters.rate.min :
-                filters.rate.min === undefined && filters.rate.max !== undefined ?
-                doctor.averageRating < filters.rate.max : true
+                    doctor.averageRating > filters.rate.min :
+                    filters.rate.min === undefined && filters.rate.max !== undefined ?
+                        doctor.averageRating < filters.rate.max : true
             );
             if (!matchesRate) return false;
         }
 
-
+        if (filters.trait) {
+            const matchesTrait = filters.trait.some((trait) =>
+                doctor.badges.some((doctorTrait: string) =>
+                    doctorTrait.toLowerCase().includes(trait.toLowerCase())
+                )
+            );
+            if (!matchesTrait) return false;
+        }
         return true;
     });
+
     return (
         <div className={styles.list}>
             <SingleDoctor list={filteredList} />

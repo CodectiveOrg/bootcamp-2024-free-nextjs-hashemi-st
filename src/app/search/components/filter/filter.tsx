@@ -44,6 +44,20 @@ export default function Filter() {
         setSelectedRate(value);   
     };
 
+    const handleTraitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value, checked } = event.target;
+        const currentTraits = filters.trait || [];
+    
+        if (checked) {
+            changeFilter("trait", [...currentTraits, value]);
+        } else {
+            changeFilter(
+                "trait",
+                currentTraits.filter((trait) => trait !== value)
+            );
+        }
+    };   
+
     return (
         <div className={styles.filterWrapper}>
             <div className={styles.selectfilterWrapper}>
@@ -179,7 +193,6 @@ export default function Filter() {
                         <input
                             type="checkbox"
                             name='specialty'
-
                             value="بیماریهای عفونی"
                             checked={filters.specialty?.includes("بیماریهای عفونی") || false}
                             onChange={handleSpecialtyChange}
@@ -190,7 +203,6 @@ export default function Filter() {
                         <input
                             type="checkbox"
                             name='specialty'
-
                             value="ارولوژی"
                             checked={filters.specialty?.includes("ارولوژی") || false}
                             onChange={handleSpecialtyChange}
@@ -277,11 +289,23 @@ export default function Filter() {
                 <div>سایر</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="checkbox" name="trait" value="nice" />
+                        <input 
+                        type="checkbox" 
+                        name="trait" 
+                        value="خوش برخورد"
+                        checked={filters.trait?.includes("خوش برخورد") || false}
+                        onChange={handleTraitChange}
+                         />
                         خوش برخورد
                     </label>
                     <label>
-                        <input type="checkbox" name="trait" value="soon" />
+                        <input 
+                        type="checkbox" 
+                        name="trait" 
+                        value="کمترین معطلی"
+                        checked={filters.trait?.includes("کمترین معطلی") || false}
+                        onChange={handleTraitChange} 
+                        />
                         کمترین معطلی
                     </label>
                 </div>
