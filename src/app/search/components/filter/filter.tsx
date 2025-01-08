@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FiltersContext } from '@/app/search/providers/filters.providers';
 import styles from "./filter.module.css";
 
 export default function Filter() {
 
     const { filters, changeFilter } = useContext(FiltersContext);
+
+    const [selectedRate, setSelectedRate] = useState<string | null>(filters.rate?.toString() || null);
 
     const handleSpecialtyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { checked, value } = event.target;
@@ -28,6 +30,18 @@ export default function Filter() {
     const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
         changeFilter("gender", value);
+    };
+
+    const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+
+        if (value === "upper4") {
+            changeFilter("rate", { min: 4 });   
+        }
+        if (value === "under4") {
+            changeFilter("rate", { max: 4 }); 
+        }
+        setSelectedRate(value);   
     };
 
     return (
@@ -212,23 +226,23 @@ export default function Filter() {
                 <div>جنسیت :</div>
                 <div className={styles.radio}>
                     <label>
-                        <input 
-                        type="radio" 
-                        name="gender" 
-                        value="male"
-                        checked={filters.gender === "male"}
-                        onChange={handleGenderChange}
-                         />
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            checked={filters.gender === "male"}
+                            onChange={handleGenderChange}
+                        />
                         مرد
                     </label>
                     <label>
-                        <input 
-                        type="radio"
-                         name="gender" 
-                         value="female" 
-                         checked={filters.gender === "female"}
-                         onChange={handleGenderChange}
-                         />
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            checked={filters.gender === "female"}
+                            onChange={handleGenderChange}
+                        />
                         زن
                     </label>
                 </div>
@@ -238,11 +252,23 @@ export default function Filter() {
                 <div>امتیاز</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="radio" name="point" value="upper4" />
+                        <input
+                            type="radio"
+                            name="point"
+                            value="upper4"
+                            checked={selectedRate === "upper4"}
+                            onChange={handleRateChange}
+                        />
                         بالای 4
                     </label>
                     <label>
-                        <input type="radio" name="point" value="under4" />
+                        <input
+                            type="radio"
+                            name="point"
+                            value="under4"
+                            checked={selectedRate === "under4"}
+                            onChange={handleRateChange}
+                        />
                         زیر 4
                     </label>
                 </div>

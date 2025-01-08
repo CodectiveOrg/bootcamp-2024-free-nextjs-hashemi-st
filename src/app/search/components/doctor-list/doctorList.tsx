@@ -5,7 +5,7 @@ import SingleDoctor from "../single-doctor/singleDoctor";
 import styles from "./doctorList.module.css";
 
 export default function DoctorList() {
-    
+
     const { filters } = useContext(FiltersContext);
 
     const filteredList = doctors.filter((doctor) => {
@@ -22,7 +22,7 @@ export default function DoctorList() {
         if (Boolean(filters.city?.length)) {
             const matchesCity = doctor.city.trim().toLowerCase().includes(filters.city!.trim().toLowerCase());
             if (!matchesCity) return false;
-        }   
+        }
 
         if (filters.specialty?.length) {
             const matchesSpecialty = filters.specialty.some((specialty) =>
@@ -34,7 +34,18 @@ export default function DoctorList() {
         if (Boolean(filters.gender?.length)) {
             const matchesGender = doctor.gender.trim().toLowerCase().includes(filters.gender!.trim().toLowerCase());
             if (!matchesGender) return false;
-        }   
+        }
+
+        if (filters.rate) {
+            const matchesRate = (
+                filters.rate.min !== undefined && filters.rate.max === undefined ?
+                doctor.averageRating > filters.rate.min :
+                filters.rate.min === undefined && filters.rate.max !== undefined ?
+                doctor.averageRating < filters.rate.max : true
+            );
+            if (!matchesRate) return false;
+        }
+
 
         return true;
     });
