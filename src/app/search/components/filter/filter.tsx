@@ -25,6 +25,11 @@ export default function Filter() {
         changeFilter("city", value);
     };
 
+    const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const value = event.target.value;
+        changeFilter("gender", value);
+    };
+
     return (
         <div className={styles.filterWrapper}>
             <div className={styles.selectfilterWrapper}>
@@ -207,11 +212,23 @@ export default function Filter() {
                 <div>جنسیت :</div>
                 <div className={styles.radio}>
                     <label>
-                        <input type="radio" name="gender" value="man" />
+                        <input 
+                        type="radio" 
+                        name="gender" 
+                        value="male"
+                        checked={filters.gender === "male"}
+                        onChange={handleGenderChange}
+                         />
                         مرد
                     </label>
                     <label>
-                        <input type="radio" name="gender" value="woman" />
+                        <input 
+                        type="radio"
+                         name="gender" 
+                         value="female" 
+                         checked={filters.gender === "female"}
+                         onChange={handleGenderChange}
+                         />
                         زن
                     </label>
                 </div>

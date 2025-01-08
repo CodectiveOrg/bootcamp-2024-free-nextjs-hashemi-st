@@ -31,6 +31,11 @@ export default function DoctorList() {
             if (!matchesSpecialty) return false;
         }
 
+        if (Boolean(filters.gender?.length)) {
+            const matchesGender = doctor.gender.trim().toLowerCase().includes(filters.gender!.trim().toLowerCase());
+            if (!matchesGender) return false;
+        }   
+
         return true;
     });
     return (
