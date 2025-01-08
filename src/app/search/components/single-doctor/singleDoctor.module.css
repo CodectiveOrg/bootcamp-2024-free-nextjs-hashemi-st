@@ -104,7 +104,14 @@
     cursor: pointer;
   
   }
+  .emptyList{
+    background-color: var(--color-gray-80);
+    color: var(--color-red);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
 
+  }
 
   /* mobile */
   @media(max-width:686px){

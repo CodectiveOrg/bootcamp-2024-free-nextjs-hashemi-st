@@ -31,9 +31,10 @@ const showBadge = (badge: string) => {
 
 }
 export default function Item({ list }: ItemProps): ReactElement {
+    console.log('hhhh', list)
     return (
         <>
-            {list.map(li => (
+            {list.length? list.map(li => (
                 <div className={styles.itemWrapper} key={li.id}>
                     <div className={styles.item}>
                         <div className={styles.info}>
@@ -82,7 +83,11 @@ export default function Item({ list }: ItemProps): ReactElement {
                         <button className={styles.turn}>گرفتن نوبت</button>
                     </div>
                 </div>
-            ))}
+            )) :
+            <div className={styles.emptyList}>
+                <h3>متاسفانه موردی یافت نشد. </h3>
+            </div>
+            }
         </>
     )
 } 
