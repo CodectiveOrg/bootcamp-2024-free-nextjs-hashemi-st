@@ -24,7 +24,10 @@ export default function Filter() {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "badges", value });
   };
-
+  const handleRateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    dispatchFilters({ type: "updated_filter", key: "rating", value });
+  };
   return (
     <div className={styles.filterWrapper}>
       <div className={styles.selectfilterWrapper}>
@@ -57,8 +60,8 @@ export default function Filter() {
           onChange={handleCityChange}
           className={styles.city}
         >
-          {cities.map(city => (
-            <option value={city}>{city}</option>
+          {cities.map((city,_i) => (
+            <option value={city} key={_i}>{city}</option>
           ))}
         </select>
       </div>
@@ -97,8 +100,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="upper4"
-            // checked={selectedRate === "upper4"}
-            // onChange={handleRateChange}
+            checked={filters.rating === "upper4"}
+            onChange={handleRateChange}
             />
             بالای 4
           </label>
@@ -107,8 +110,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="under4"
-            // checked={selectedRate === "under4"}
-            // onChange={handleRateChange}
+            checked={filters.rating === "under4"}
+             onChange={handleRateChange}
             />
             زیر 4
           </label>

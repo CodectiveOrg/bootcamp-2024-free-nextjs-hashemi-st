@@ -5,4 +5,5 @@ export type FiltersType = {
   degree?: string;
   badges?: string;
   city?: string;
+  rating?: string;
 };

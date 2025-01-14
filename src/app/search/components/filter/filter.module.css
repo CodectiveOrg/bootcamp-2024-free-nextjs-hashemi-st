@@ -85,7 +85,7 @@
 
   & .radio {
     display: flex;
-    gap: 1.1rem;
+    gap: .7rem;
 
     & label {
       display: flex;

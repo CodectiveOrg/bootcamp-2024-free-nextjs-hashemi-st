@@ -42,7 +42,8 @@ export default function DoctorsProvider({
         doesInclude(doctor.gender, filters.gender, true) &&
         doesInclude(doctor.degree, filters.degree) &&
         doesInclude(doctor.city, filters.city) &&
-        doesSomeInclude(doctor.badges, filters.badges) 
+        doesSomeInclude(doctor.badges, filters.badges) &&
+        doesIncludeRating(doctor.averageRating, filters.rating)
       );
     },
     [filters],
@@ -85,4 +86,21 @@ function doesInclude(item: string, query?: string, exact: boolean = false): bool
   }
 
   return item.toLowerCase().includes(query.toLowerCase());    
+}
+
+function doesIncludeRatingUpFour(value:number, query?: number): boolean {
+return value >= 4 && value < 5
+}
+function doesIncludeRatingUnderFour(value:number, query?: number): boolean {
+return value < 4 && value > 0
+}
+
+function doesIncludeRating(value:number, query?: string): boolean {
+if(query === "upper4"){
+  return value >= 4
+}
+if(query === "under4"){
+  return value < 4
+}
+return true;
 }
