@@ -81,8 +81,8 @@ function doesInclude(item: string, query?: string, exact: boolean = false): bool
   }
 
   if (exact) {
-    return item.toLowerCase() === query.toLowerCase(); // مقایسه دقیق
+    return item.toLowerCase() === query.toLowerCase();   
   }
 
-  return item.toLowerCase().includes(query.toLowerCase()); // بررسی شامل بودن
+  return item.toLowerCase().includes(query.toLowerCase());    
 }

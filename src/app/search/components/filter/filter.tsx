@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/filters/filters.providers";
 import { expertises } from "@/models/expertises";
+import { cities } from "@/models/cities";
 import styles from "./filter.module.css";
 
 export default function Filter() {
@@ -9,7 +10,11 @@ export default function Filter() {
   const expertiseClickHandler = (value: string): void => {
     dispatchFilters({ type: "updated_filter", key: "expertise", value });
   };
+  const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    dispatchFilters({ type: "updated_filter", key: "city", value });
 
+  };
   return (
     <div className={styles.filterWrapper}>
       <div className={styles.selectfilterWrapper}>
@@ -17,6 +22,8 @@ export default function Filter() {
       </div>
 
       <ul className={styles.wrapperExpert}>
+        <div className={styles.title}> تخصص مورد نظرتان را انتخاب کنید: </div>
+
         {expertises.map((x) => (
           <li key={x}>
             <label className={styles.labels}>
@@ -36,26 +43,13 @@ export default function Filter() {
       <div className={styles.wrapperCity}>
         <div>انتخاب شهر </div>
         <select
-          // value={selectedCity}
-          // onChange={handleCityChange}
+         value={filters.city}
+         onChange={handleCityChange}
           className={styles.city}
         >
-          <option></option>
-          <option value="اردبیل">اردبیل</option>
-          <option value="اصفهان">اصفهان</option>
-          <option value="بابل">بابل</option>
-          <option value="بندرعباس">بندرعباس</option>
-          <option value="تهران">تهران</option>
-          <option value="خرم آباد">خرم آباد</option>
-          <option value="جهرم">جهرم</option>
-          <option value="کاشان">کاشان</option>
-          <option value="کرمانشاه">کرمانشاه</option>
-          <option value="قائن">قائن</option>
-          <option value="سمنان">سمنان</option>
-          <option value="شیراز">شیراز</option>
-          <option value="مشهد">مشهد</option>
-          <option value="نیشابور">نیشابور</option>
-          <option value="همدان">همدان</option>
+          {cities.map(city => (
+            <option value={city}>{city}</option>
+          ))}
         </select>
       </div>
 
