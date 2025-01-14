@@ -15,6 +15,16 @@ export default function Filter() {
     dispatchFilters({ type: "updated_filter", key: "city", value });
 
   };
+  const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    dispatchFilters({ type: "updated_filter", key: "gender", value });
+  };
+
+  const handleBadgesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    dispatchFilters({ type: "updated_filter", key: "badges", value });
+  };
+
   return (
     <div className={styles.filterWrapper}>
       <div className={styles.selectfilterWrapper}>
@@ -43,8 +53,8 @@ export default function Filter() {
       <div className={styles.wrapperCity}>
         <div>انتخاب شهر </div>
         <select
-         value={filters.city}
-         onChange={handleCityChange}
+          value={filters.city}
+          onChange={handleCityChange}
           className={styles.city}
         >
           {cities.map(city => (
@@ -62,7 +72,7 @@ export default function Filter() {
               name="gender"
               value="male"
               checked={filters.gender === "male"}
-            // onChange={handleGenderChange}
+              onChange={handleGenderChange}
             />
             مرد
           </label>
@@ -72,7 +82,7 @@ export default function Filter() {
               name="gender"
               value="female"
               checked={filters.gender === "female"}
-            // onChange={handleGenderChange}
+              onChange={handleGenderChange}
             />
             زن
           </label>
@@ -112,8 +122,8 @@ export default function Filter() {
               type="checkbox"
               name="trait"
               value="خوش برخورد"
-            // checked={filters.trait?.includes("خوش برخورد") || false}
-            // onChange={handleTraitChange}
+              checked={filters.badges?.includes("خوش برخورد") || false}
+              onChange={handleBadgesChange}
             />
             خوش برخورد
           </label>
@@ -122,8 +132,8 @@ export default function Filter() {
               type="checkbox"
               name="trait"
               value="کمترین معطلی"
-            // checked={filters.trait?.includes("کمترین معطلی") || false}
-            // onChange={handleTraitChange}
+              checked={filters.badges?.includes("کمترین معطلی") || false}
+              onChange={handleBadgesChange}
             />
             کمترین معطلی
           </label>
