@@ -1,7 +1,8 @@
 export type FiltersType = {
-  specialty?: string[];
+  query?: string;
   gender?: string;
+  expertise?: string;
+  degree?: string;
+  badges?: string;
   city?: string;
-  rate?: { min?: number; max?: number };
-  trait?: string[];
 };

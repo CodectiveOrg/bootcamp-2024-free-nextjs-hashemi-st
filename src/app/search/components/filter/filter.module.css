@@ -3,37 +3,17 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   position: sticky;
-  top:0
+  top: 0
 }
 
-.selectfilterWrapper {
+.wrapperExpert {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 20px;
-
-  & .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & .delete {
-      cursor: pointer;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-      background: var(--color-red);
-      width: 100%;
-    }
-
-    & .delete:hover {
-      background: var(--color-yellow);
-      color: var(--color-gray-12);
-    }
-  }
 
   & .labels {
     display: flex;
@@ -42,40 +22,6 @@
     align-items: center;
     justify-content: start;
     padding: 0;
-
-    & .label {
-      display: flex;
-      justify-content: space-between;
-      min-width: 70px;
-      border: 1px solid grey;
-      padding: 0 5px;
-      border-radius: 20px;
-      align-items: center;
-
-      & span {
-        padding: 4px;
-      }
-    }
-  }
-}
-
-.wrapperExpert {
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 0.5rem;
-  margin-bottom: 20px;
-
-  & .experts {
-    display: flex;
-    flex-direction: column;
-    line-height: 2rem;
-
-    & label {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-    }
   }
 }
 

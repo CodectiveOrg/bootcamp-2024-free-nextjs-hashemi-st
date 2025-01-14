@@ -1,219 +1,43 @@
-import { useContext, useState } from "react";
-import { FiltersContext } from "@/app/search/providers/filters.providers";
+import { useContext } from "react";
+import { FiltersContext } from "@/app/search/providers/filters/filters.providers";
+import { expertises } from "@/models/expertises";
 import styles from "./filter.module.css";
 
 export default function Filter() {
-  const { filters, changeFilter, clearAll } = useContext(FiltersContext);
+  const { filters, dispatchFilters } = useContext(FiltersContext);
 
-  const [selectedRate, setSelectedRate] = useState<string | null>(
-    filters.rate?.toString() || null,
-  );
-  const [selectedCity, setSelectedCity] = useState<string>(filters.city || "");
-
-  const handleClearAll = () => {
-    clearAll();
-    setSelectedCity("");
-  };
-
-  const handleSpecialtyChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    const { checked, value } = event.target;
-
-    const currentSpecialties = filters.specialty || [];
-    if (checked) {
-      changeFilter("specialty", [...currentSpecialties, value]);
-    } else {
-      changeFilter(
-        "specialty",
-        currentSpecialties.filter((specialty) => specialty !== value),
-      );
-    }
-  };
-
-  const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
-    setSelectedCity(value);
-    changeFilter("city", value);
-  };
-
-  const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    changeFilter("gender", value);
-  };
-
-  const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-
-    if (value === "upper4") {
-      changeFilter("rate", { min: 4 });
-    }
-    if (value === "under4") {
-      changeFilter("rate", { max: 4 });
-    }
-    setSelectedRate(value);
-  };
-
-  const handleTraitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value, checked } = event.target;
-    const currentTraits = filters.trait || [];
-
-    if (checked) {
-      changeFilter("trait", [...currentTraits, value]);
-    } else {
-      changeFilter(
-        "trait",
-        currentTraits.filter((trait) => trait !== value),
-      );
-    }
+  const expertiseClickHandler = (value: string): void => {
+    dispatchFilters({ type: "updated_filter", key: "expertise", value });
   };
 
   return (
     <div className={styles.filterWrapper}>
       <div className={styles.selectfilterWrapper}>
-        <div className={styles.wrapper}>
-          {Object.keys(filters).length > 0 && filters.constructor === Object ? (
-            <button className={styles.delete} onClick={handleClearAll}>
-              حذف فیلترها
-            </button>
-          ) : (
-            <h4 style={{ color: "var(--color-yellow)" }}>انتخاب فیلترها</h4>
-          )}
-        </div>
+
       </div>
-      <div className={styles.wrapperExpert}>
-        <div className={styles.titleExpert}>تخصص :</div>
-        <div className={styles.experts}>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="قلب"
-              checked={filters.specialty?.includes("قلب") || false}
-              onChange={handleSpecialtyChange}
-            />
-            قلب و عروق
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="گفتار درمانی"
-              checked={filters.specialty?.includes("گفتار درمانی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            گفتار درمانی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="چشم پزشکی"
-              checked={filters.specialty?.includes("چشم پزشکی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            چشم پزشکی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="کودکان"
-              checked={filters.specialty?.includes("کودکان") || false}
-              onChange={handleSpecialtyChange}
-            />
-            کودکان،اطفال و نوزادان
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="جراحی عمومی"
-              checked={filters.specialty?.includes("جراحی عمومی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            جراحی عمومی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="جراحی پلاستیک و زیبایی"
-              checked={
-                filters.specialty?.includes("جراحی پلاستیک و زیبایی") || false
-              }
-              onChange={handleSpecialtyChange}
-            />
-            جراحی پلاستیک و زیبایی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="علوم تغذیه"
-              checked={filters.specialty?.includes("علوم تغذیه") || false}
-              onChange={handleSpecialtyChange}
-            />
-            علوم تغذیه
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="ارتوپدی"
-              checked={filters.specialty?.includes("ارتوپدی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            ارتوپدی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="گوارش"
-              checked={filters.specialty?.includes("گوارش") || false}
-              onChange={handleSpecialtyChange}
-            />
-            گوارش
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="زنان و زایمان"
-              checked={filters.specialty?.includes("زنان و زایمان") || false}
-              onChange={handleSpecialtyChange}
-            />
-            زنان و زایمان
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="بیماریهای عفونی"
-              checked={filters.specialty?.includes("بیماریهای عفونی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            بیماریهای عفونی
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="specialty"
-              value="ارولوژی"
-              checked={filters.specialty?.includes("ارولوژی") || false}
-              onChange={handleSpecialtyChange}
-            />
-            ارولوژی
-          </label>
-        </div>
-      </div>
+
+      <ul className={styles.wrapperExpert}>
+        {expertises.map((x) => (
+          <li key={x}>
+            <label className={styles.labels}>
+              <input
+                type="checkbox"
+                name="expertise"
+                value={x}
+                checked={filters.expertise === x}
+                onChange={() => expertiseClickHandler(x)}
+              />
+              {x}
+            </label>
+          </li>
+        ))}
+      </ul>
 
       <div className={styles.wrapperCity}>
         <div>انتخاب شهر </div>
         <select
-          value={selectedCity}
-          onChange={handleCityChange}
+          // value={selectedCity}
+          // onChange={handleCityChange}
           className={styles.city}
         >
           <option></option>
@@ -244,7 +68,7 @@ export default function Filter() {
               name="gender"
               value="male"
               checked={filters.gender === "male"}
-              onChange={handleGenderChange}
+            // onChange={handleGenderChange}
             />
             مرد
           </label>
@@ -254,7 +78,7 @@ export default function Filter() {
               name="gender"
               value="female"
               checked={filters.gender === "female"}
-              onChange={handleGenderChange}
+            // onChange={handleGenderChange}
             />
             زن
           </label>
@@ -269,8 +93,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="upper4"
-              checked={selectedRate === "upper4"}
-              onChange={handleRateChange}
+            // checked={selectedRate === "upper4"}
+            // onChange={handleRateChange}
             />
             بالای 4
           </label>
@@ -279,8 +103,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="under4"
-              checked={selectedRate === "under4"}
-              onChange={handleRateChange}
+            // checked={selectedRate === "under4"}
+            // onChange={handleRateChange}
             />
             زیر 4
           </label>
@@ -294,8 +118,8 @@ export default function Filter() {
               type="checkbox"
               name="trait"
               value="خوش برخورد"
-              checked={filters.trait?.includes("خوش برخورد") || false}
-              onChange={handleTraitChange}
+            // checked={filters.trait?.includes("خوش برخورد") || false}
+            // onChange={handleTraitChange}
             />
             خوش برخورد
           </label>
@@ -304,8 +128,8 @@ export default function Filter() {
               type="checkbox"
               name="trait"
               value="کمترین معطلی"
-              checked={filters.trait?.includes("کمترین معطلی") || false}
-              onChange={handleTraitChange}
+            // checked={filters.trait?.includes("کمترین معطلی") || false}
+            // onChange={handleTraitChange}
             />
             کمترین معطلی
           </label>

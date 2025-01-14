@@ -10,5 +10,7 @@ export type DoctorModel = {
   brief: string;
   badges: string[];
   gender: string;
-  city: string;
+  degree: string;
+  expertise: string;
+  city: string
 };
