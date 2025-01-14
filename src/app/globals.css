@@ -59,7 +59,7 @@ ul {
 }
 
 p {
-  color: var(--color-gray-80);
+  color: var(--color-gray-40);
 }
 
 a {
@@ -77,15 +77,14 @@ body {
 
   font-size: var(--fz-400);
 
-  > * {
+  >* {
     padding-inline: var(--full-width-padding-inline);
   }
 
   .tagline {
-    background-color: var(--color-gray-16);
-
-    padding-block: 1rem;
-
+    background-color: var(--color-gray-40);
+    color: var(--color-gray-90);
+    padding-block: .8rem;
     text-align: center;
   }
 }
