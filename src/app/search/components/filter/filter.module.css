@@ -1,5 +1,9 @@
 .filterWrapper {
   padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: sticky;
+  top:0
 }
 
 .selectfilterWrapper {
