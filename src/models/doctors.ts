@@ -319,4 +319,22 @@ export const doctors: DoctorModel[] = [
     badges: [],
     city: "تهران"
   },
+  {
+    id: "e6719f23-e846-4a95-88f9-c013c5d9cb4f",
+    name: "مجتبی قدسی",
+    image:
+      "/getImage/p24/search-men/75fb4a009a8ab4af3a5c4f819f1846c7.jpg?size=150",
+    isVerified: true,
+    averageRating: 4.92,
+    totalVotes: 1487,
+    address:
+      "اردبیل,اردبیل، اول خیابان والی، خیابان شهیدان نوعی اقدم، نرسیده به بیمارستان امام خمینی، جنب داروخانه دکترنصیرپور",
+    firstAvailableAppointment: "16 دی 11 صبح",
+    brief: "متخصص بیماری‌های کودکان",
+    badges: ["خوش برخورد", "کمترین معطلی"],
+    expertise:"کودکان و اطفال",
+    city:"اردبیل",
+    degree:"متخصص",
+    gender:"male"
+  }
 ];

@@ -15,7 +15,6 @@ export default function Filter() {
   const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "city", value });
-
   };
 
   const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,6 +60,7 @@ export default function Filter() {
           onChange={handleCityChange}
           className={styles.city}
         >
+          <option value=''></option>
           {cities.map((city,_i) => (
             <option value={city} key={_i}>{city}</option>
           ))}
