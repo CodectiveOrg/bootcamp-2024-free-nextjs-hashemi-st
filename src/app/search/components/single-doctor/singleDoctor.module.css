@@ -27,9 +27,6 @@
       line-height: 30px;
 
       & .descWrapper {
-        & .brief {
-          text-align: justify;
-        }
         & .comment {
           display: flex;
           align-items: center;
