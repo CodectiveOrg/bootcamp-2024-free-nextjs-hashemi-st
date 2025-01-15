@@ -16,7 +16,7 @@ export const doctors: DoctorModel[] = [
     degree: "متخصص",
     expertise: "عفونی",
     badges: ["کمترین معطلی"],
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "61ea57d2-4aef-4e02-9a35-90f7d4c5a10e",
@@ -33,7 +33,7 @@ export const doctors: DoctorModel[] = [
     degree: "فلوشیپ",
     expertise: "قلب و عروق",
     badges: [],
-    city: "یزد"
+    city: "یزد",
   },
   {
     id: "e408016a-1290-4a9c-a907-6702dac58ef4",
@@ -52,7 +52,7 @@ export const doctors: DoctorModel[] = [
     degree: "کاردان",
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
-    city: "قم"
+    city: "قم",
   },
   {
     id: "1a8daf37-714a-45ac-91e6-e0f6992d88a1",
@@ -70,7 +70,7 @@ export const doctors: DoctorModel[] = [
     degree: "متخصص",
     expertise: "زنان، زایمان و نازایی",
     badges: [],
-    city: "علی آباد"
+    city: "علی آباد",
   },
   {
     id: "973ef75f-f492-4516-9c63-506920d1aee0",
@@ -88,7 +88,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "تغذیه",
     badges: ["کمترین معطلی"],
-    city: "اهواز"
+    city: "اهواز",
   },
   {
     id: "2b52cf72-a270-11ea-893e-005056b09c11",
@@ -106,7 +106,7 @@ export const doctors: DoctorModel[] = [
     degree: "دکترای تخصصی",
     expertise: "طب سنتی",
     badges: ["کمترین معطلی"],
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "baeeab42-e79e-4848-ae78-1b18e8a195c4",
@@ -123,7 +123,7 @@ export const doctors: DoctorModel[] = [
     degree: "دکترای",
     expertise: "پزشک عمومی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "d476e2fd-3c6b-446a-a06b-e0c5c2edb062",
@@ -140,7 +140,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
-    city: "ورامین"
+    city: "ورامین",
   },
   {
     id: "da8a5af6-3e6e-4a65-9327-4d0bd7469d30",
@@ -158,7 +158,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
-    city: "بجنورد"
+    city: "بجنورد",
   },
   {
     id: "98577481-84be-4e20-8a8a-3c4abaab76c5",
@@ -175,7 +175,7 @@ export const doctors: DoctorModel[] = [
     degree: "دانشجوی تخصص",
     expertise: "جراحی دهان و دندان",
     badges: ["کمترین معطلی"],
-    city: "تبریز"
+    city: "تبریز",
   },
   {
     id: "8cec9d31-a200-11ea-befd-005056b09c11",
@@ -193,7 +193,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
-    city: "زنجان"
+    city: "زنجان",
   },
   {
     id: "97421b53-3781-490a-b1eb-1f71c9cda63c",
@@ -211,7 +211,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس ارشد",
     expertise: "توانبخشی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
-    city: "اسلامشهر"
+    city: "اسلامشهر",
   },
   {
     id: "a70497d6-c6aa-4144-a863-2962ab2b7f44",
@@ -229,7 +229,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "توانبخشی",
     badges: ["کمترین معطلی"],
-    city: "رشت"
+    city: "رشت",
   },
   {
     id: "2b8367b3-015d-44b0-8c11-8113600955ec",
@@ -246,7 +246,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
-    city: "خرم آباد"
+    city: "خرم آباد",
   },
   {
     id: "974248f5-cb6d-4193-aaed-58f56d6b21df",
@@ -265,7 +265,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["خوش برخورد", "کمترین معطلی"],
-    city: "بندرعباس"
+    city: "بندرعباس",
   },
   {
     id: "9ce1d81f-a5c7-433f-8312-0f26d94cd1ad",
@@ -282,7 +282,7 @@ export const doctors: DoctorModel[] = [
     degree: "دانشجوی تخصص",
     expertise: "مغز و اعصاب",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "56909296-d252-4452-9ed5-64cbf80c14e2",
@@ -299,7 +299,7 @@ export const doctors: DoctorModel[] = [
     degree: "کارشناس",
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
-    city: "شهرکرد"
+    city: "شهرکرد",
   },
   {
     id: "3f9b752a-2af2-4c66-be4e-4e1cf597b491",
@@ -317,7 +317,7 @@ export const doctors: DoctorModel[] = [
     degree: "متخصص",
     expertise: "زنان، زایمان و نازایی",
     badges: [],
-    city: "تهران"
+    city: "تهران",
   },
   {
     id: "e6719f23-e846-4a95-88f9-c013c5d9cb4f",
@@ -332,9 +332,9 @@ export const doctors: DoctorModel[] = [
     firstAvailableAppointment: "16 دی 11 صبح",
     brief: "متخصص بیماری‌های کودکان",
     badges: ["خوش برخورد", "کمترین معطلی"],
-    expertise:"کودکان و اطفال",
-    city:"اردبیل",
-    degree:"متخصص",
-    gender:"male"
-  }
+    expertise: "کودکان و اطفال",
+    city: "اردبیل",
+    degree: "متخصص",
+    gender: "male",
+  },
 ];

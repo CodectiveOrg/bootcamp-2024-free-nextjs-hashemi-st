@@ -76,24 +76,28 @@ function doesSomeInclude(items: string[], query?: string): boolean {
   return items.some((item) => doesInclude(item, query));
 }
 
-function doesInclude(item: string, query?: string, exact: boolean = false): boolean {
+function doesInclude(
+  item: string,
+  query?: string,
+  exact: boolean = false,
+): boolean {
   if (!query) {
     return true;
   }
 
   if (exact) {
-    return item.toLowerCase() === query.toLowerCase();   
+    return item.toLowerCase() === query.toLowerCase();
   }
 
-  return item.toLowerCase().includes(query.toLowerCase());    
+  return item.toLowerCase().includes(query.toLowerCase());
 }
 
-function doesIncludeRating(value:number, query?: string): boolean {
-if(query === "امتیاز بالای 4"){
-  return value >= 4
-}
-if(query === "امتیاز زیر 4"){
-  return value < 4
-}
-return true;
+function doesIncludeRating(value: number, query?: string): boolean {
+  if (query === "امتیاز بالای 4") {
+    return value >= 4;
+  }
+  if (query === "امتیاز زیر 4") {
+    return value < 4;
+  }
+  return true;
 }

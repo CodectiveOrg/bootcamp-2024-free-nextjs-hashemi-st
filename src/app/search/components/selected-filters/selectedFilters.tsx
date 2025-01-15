@@ -1,15 +1,19 @@
-
-import { useContext, useMemo } from 'react'
-import { FiltersContext } from '../../providers/filters/filters.providers';
-import { FiltersType } from '../../types/filters.type';
-import styles from './selectedFilters.module.css';
+import { useContext, useMemo } from "react";
+import { FiltersContext } from "../../providers/filters/filters.providers";
+import { FiltersType } from "../../types/filters.type";
+import styles from "./selectedFilters.module.css";
 
 export default function SelectedFilters() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
 
   const isEmpty = useMemo(() => {
     return (
-      !filters.rating && !filters.expertise && !filters.gender && !filters.degree && !filters.city && !filters.badges
+      !filters.rating &&
+      !filters.expertise &&
+      !filters.gender &&
+      !filters.degree &&
+      !filters.city &&
+      !filters.badges
     );
   }, [filters]);
 
@@ -35,37 +39,55 @@ export default function SelectedFilters() {
 
       <ul className={styles.filters}>
         {filters.rating && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("rating")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("rating")}
+          >
             {filters.rating}
           </li>
         )}
         {filters.city && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("city")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("city")}
+          >
             {filters.city}
           </li>
         )}
         {filters.badges && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("badges")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("badges")}
+          >
             {filters.badges}
           </li>
         )}
         {filters.expertise && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("expertise")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("expertise")}
+          >
             {filters.expertise}
           </li>
         )}
         {filters.gender && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("gender")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("gender")}
+          >
             {filters.gender === "male" && "مرد"}
             {filters.gender === "female" && "زن"}
           </li>
         )}
         {filters.degree && (
-          <li className={styles.labelFilter} onClick={() => filterClickHandler("degree")}>
+          <li
+            className={styles.labelFilter}
+            onClick={() => filterClickHandler("degree")}
+          >
             {filters.degree}
           </li>
         )}
       </ul>
     </div>
-  )
+  );
 }

@@ -27,7 +27,7 @@
       line-height: 30px;
 
       & .descWrapper {
-        & .brief{
+        & .brief {
           text-align: justify;
         }
         & .comment {
@@ -118,11 +118,11 @@
 
 /* mobile */
 @media (max-width: 686px) {
-  .wrapperTags span{
+  .wrapperTags span {
     font-size: 11px !important;
-    }
-.info { 
-  flex-direction: column;
-  align-items: flex-start !important;
-}
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
 }

@@ -100,14 +100,14 @@ body {
 
   font-size: var(--fz-400);
 
-  >* {
+  > * {
     padding-inline: var(--full-width-padding-inline);
   }
 
   .tagline {
     background-color: var(--color-gray-40);
     color: var(--color-gray-90);
-    padding-block: .8rem;
+    padding-block: 0.8rem;
     text-align: center;
   }
 }

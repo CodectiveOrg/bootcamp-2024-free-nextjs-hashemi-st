@@ -33,8 +33,8 @@ export default function Filter() {
   };
 
   return (
-    <div className={styles.filterWrapper}>    
-      <SelectedFilters />    
+    <div className={styles.filterWrapper}>
+      <SelectedFilters />
       <ul className={styles.wrapperExpert}>
         <div className={styles.title}> تخصص مورد نظرتان را انتخاب کنید: </div>
         {expertises.map((x) => (
@@ -60,9 +60,11 @@ export default function Filter() {
           onChange={handleCityChange}
           className={styles.city}
         >
-          <option value=''></option>
-          {cities.map((city,_i) => (
-            <option value={city} key={_i}>{city}</option>
+          <option value=""></option>
+          {cities.map((city, _i) => (
+            <option value={city} key={_i}>
+              {city}
+            </option>
           ))}
         </select>
       </div>
@@ -101,8 +103,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="امتیاز بالای 4"
-            checked={filters.rating === "امتیاز بالای 4"}
-            onChange={handleRateChange}
+              checked={filters.rating === "امتیاز بالای 4"}
+              onChange={handleRateChange}
             />
             بالای 4
           </label>
@@ -111,8 +113,8 @@ export default function Filter() {
               type="radio"
               name="point"
               value="امتیاز زیر 4"
-            checked={filters.rating === "امتیاز زیر 4"}
-             onChange={handleRateChange}
+              checked={filters.rating === "امتیاز زیر 4"}
+              onChange={handleRateChange}
             />
             زیر 4
           </label>

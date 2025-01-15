@@ -12,5 +12,5 @@ export type DoctorModel = {
   gender: string;
   degree: string;
   expertise: string;
-  city: string
+  city: string;
 };

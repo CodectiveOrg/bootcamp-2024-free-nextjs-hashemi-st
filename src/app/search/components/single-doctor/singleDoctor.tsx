@@ -52,11 +52,11 @@ export default function Item({ list }: ItemProps): ReactElement {
               <div className={styles.wrapperTags}>
                 {li.badges
                   ? li.badges.map((badge, _i) => (
-                    <div key={_i} className={styles.trait}>
-                      {showBadge(badge)}
-                      <span> {badge}</span>
-                    </div>
-                  ))
+                      <div key={_i} className={styles.trait}>
+                        {showBadge(badge)}
+                        <span> {badge}</span>
+                      </div>
+                    ))
                   : null}
               </div>
               <button className={styles.turn}>گرفتن نوبت</button>

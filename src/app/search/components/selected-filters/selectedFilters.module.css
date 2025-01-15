@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    >li {
+    > li {
       background-color: var(--color-surface-300);
       box-shadow: var(--shadow-400);
       position: relative;
@@ -63,7 +63,7 @@
 
 /* mobile */
 @media (max-width: 686px) {
- .filters>li {
+  .filters > li {
     font-size: 12px;
   }
 }
