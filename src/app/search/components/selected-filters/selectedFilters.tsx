@@ -56,7 +56,8 @@ export default function SelectedFilters() {
         )}
         {filters.gender && (
           <li className={styles.labelFilter} onClick={() => filterClickHandler("gender")}>
-            {filters.gender}
+            {filters.gender === "male" && "مرد"}
+            {filters.gender === "female" && "زن"}
           </li>
         )}
         {filters.degree && (

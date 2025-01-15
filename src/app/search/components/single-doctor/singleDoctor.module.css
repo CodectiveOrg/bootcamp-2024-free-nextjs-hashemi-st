@@ -27,6 +27,9 @@
       line-height: 30px;
 
       & .descWrapper {
+        & .brief{
+          text-align: justify;
+        }
         & .comment {
           display: flex;
           align-items: center;
@@ -43,8 +46,7 @@
 
       & .avatarWrapper {
         position: relative;
-        width: 100px;
-        height: 100px;
+        min-width: 100px;
 
         & .avatar {
           width: 100%;
@@ -65,7 +67,7 @@
           align-items: center;
           justify-content: center;
           border-radius: 50%;
-          font-size: 12px;
+          font-size: 20px;
           font-weight: bold;
         }
       }
@@ -75,14 +77,14 @@
       display: flex;
       gap: 10px;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
 
       & svg {
         margin: 0 0 -5px -2px;
       }
 
       & span {
-        font-size: small;
+        font-size: 14px;
       }
 
       & .trait {
@@ -116,7 +118,11 @@
 
 /* mobile */
 @media (max-width: 686px) {
-  .wrapperTags {
-    flex-direction: column;
-  }
+  .wrapperTags span{
+    font-size: 11px !important;
+    }
+.info { 
+  flex-direction: column;
+  align-items: flex-start !important;
+}
 }

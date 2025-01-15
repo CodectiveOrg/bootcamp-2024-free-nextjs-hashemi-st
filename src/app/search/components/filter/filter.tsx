@@ -11,11 +11,13 @@ export default function Filter() {
   const expertiseClickHandler = (value: string): void => {
     dispatchFilters({ type: "updated_filter", key: "expertise", value });
   };
+
   const handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "city", value });
 
   };
+
   const handleGenderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "gender", value });
@@ -25,16 +27,17 @@ export default function Filter() {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "badges", value });
   };
+
   const handleRateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     dispatchFilters({ type: "updated_filter", key: "rating", value });
   };
+
   return (
     <div className={styles.filterWrapper}>    
       <SelectedFilters />    
       <ul className={styles.wrapperExpert}>
         <div className={styles.title}> تخصص مورد نظرتان را انتخاب کنید: </div>
-
         {expertises.map((x) => (
           <li key={x}>
             <label className={styles.labels}>
