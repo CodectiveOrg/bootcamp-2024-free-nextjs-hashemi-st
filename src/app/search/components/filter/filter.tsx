@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/filters/filters.providers";
+import SelectedFilters from "../selected-filters/selectedFilters";
 import { expertises } from "@/models/expertises";
 import { cities } from "@/models/cities";
 import styles from "./filter.module.css";
@@ -29,11 +30,8 @@ export default function Filter() {
     dispatchFilters({ type: "updated_filter", key: "rating", value });
   };
   return (
-    <div className={styles.filterWrapper}>
-      <div className={styles.selectfilterWrapper}>
-
-      </div>
-
+    <div className={styles.filterWrapper}>    
+      <SelectedFilters />    
       <ul className={styles.wrapperExpert}>
         <div className={styles.title}> تخصص مورد نظرتان را انتخاب کنید: </div>
 
@@ -99,8 +97,8 @@ export default function Filter() {
             <input
               type="radio"
               name="point"
-              value="upper4"
-            checked={filters.rating === "upper4"}
+              value="امتیاز بالای 4"
+            checked={filters.rating === "امتیاز بالای 4"}
             onChange={handleRateChange}
             />
             بالای 4
@@ -109,8 +107,8 @@ export default function Filter() {
             <input
               type="radio"
               name="point"
-              value="under4"
-            checked={filters.rating === "under4"}
+              value="امتیاز زیر 4"
+            checked={filters.rating === "امتیاز زیر 4"}
              onChange={handleRateChange}
             />
             زیر 4

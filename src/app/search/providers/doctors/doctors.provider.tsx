@@ -88,18 +88,11 @@ function doesInclude(item: string, query?: string, exact: boolean = false): bool
   return item.toLowerCase().includes(query.toLowerCase());    
 }
 
-function doesIncludeRatingUpFour(value:number, query?: number): boolean {
-return value >= 4 && value < 5
-}
-function doesIncludeRatingUnderFour(value:number, query?: number): boolean {
-return value < 4 && value > 0
-}
-
 function doesIncludeRating(value:number, query?: string): boolean {
-if(query === "upper4"){
+if(query === "امتیاز بالای 4"){
   return value >= 4
 }
-if(query === "under4"){
+if(query === "امتیاز زیر 4"){
   return value < 4
 }
 return true;
