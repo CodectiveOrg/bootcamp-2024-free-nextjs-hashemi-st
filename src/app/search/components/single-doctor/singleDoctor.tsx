@@ -110,8 +110,8 @@ export default function Item({ list }: ItemProps): ReactElement {
                   </svg>
                 </div>
                 <div className={styles.descWrapper}>
-                  <div className={styles.title}>{li.name} </div>
-                  <div className={styles.expert}>{li.brief} </div>
+                  <div>{li.name} </div>
+                  <div>{li.brief} </div>
                   <div className={styles.comment}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +126,8 @@ export default function Item({ list }: ItemProps): ReactElement {
                         fill="currentColor"
                       ></path>
                     </svg>
-                    <span className="">{li.averageRating.toFixed(2)}</span>
-                    <span className="">
+                    <span>{li.averageRating.toFixed(2)}</span>
+                    <span>
                       (<span>{li.totalVotes}</span> نظر)
                     </span>
                   </div>
@@ -153,8 +153,8 @@ export default function Item({ list }: ItemProps): ReactElement {
                     strokeWidth="1.5"
                   ></path>
                 </svg>
-                <div className="">
-                  <span className="">{li.address} </span>
+                <div>
+                  <span>{li.address} </span>
                 </div>
               </div>
               <div className={styles.wrapperTags}>
@@ -172,9 +172,9 @@ export default function Item({ list }: ItemProps): ReactElement {
           </div>
         ))
       ) : (
-        <div className={styles.emptyList}>
-          <h3>متاسفانه موردی یافت نشد. </h3>
-        </div>
+          <div className={styles.emptyList}>
+            <h3>متاسفانه هیچ دکتری با تخصص موردنظر یافت نشد.</h3>
+          </div>
       )}
     </>
   );
