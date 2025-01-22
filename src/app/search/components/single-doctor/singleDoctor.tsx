@@ -12,52 +12,52 @@ type ItemProps = {
 };
 
 export default function Item({ doctor }: ItemProps): ReactElement {
-  return (              
-          <div className={styles.itemWrapper} key={doctor.id}>
-            <div className={styles.item}>
-              <div className={styles.info}>
-                <div className={styles.avatarWrapper}>
-                  <Image
-                    src={`https://cdn.paziresh24.com${doctor.image}`}
-                    alt="avatar"
-                    className={styles.avatar}
-                    width={100}
-                    height={100}
-                  />
-                  <div className={styles.badge}>
-                    <Registered />
-                  </div>
-                </div>
-                <div className={styles.descWrapper}>
-                  <div>{doctor.name} </div>
-                  <div className={styles.brief}>{doctor.brief} </div>
-                  <div className={styles.comment}>
-                    <Star />
-                    <span>{doctor.averageRating.toFixed(2)}</span>
-                    <span>
-                      (<span>{doctor.totalVotes}</span> نظر)
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.address}>
-                <Location />
-                <div>
-                  <span>{doctor.address} </span>
-                </div>
-              </div>
-              <div className={styles.wrapperTags}>
-                {doctor.badges
-                  ? doctor.badges.map((badge, _i) => (
-                      <div key={_i} className={styles.trait}>
-                        {showBadge(badge)}
-                        <span> {badge}</span>
-                      </div>
-                    ))
-                  : null}
-              </div>
-              <button className={styles.turn}>گرفتن نوبت</button>
+  return (
+    <div className={styles.itemWrapper} key={doctor.id}>
+      <div className={styles.item}>
+        <div className={styles.info}>
+          <div className={styles.avatarWrapper}>
+            <Image
+              src={`https://cdn.paziresh24.com${doctor.image}`}
+              alt="avatar"
+              className={styles.avatar}
+              width={100}
+              height={100}
+            />
+            <div className={styles.badge}>
+              <Registered />
             </div>
           </div>
-       )     
+          <div className={styles.descWrapper}>
+            <div>{doctor.name} </div>
+            <div className={styles.brief}>{doctor.brief} </div>
+            <div className={styles.comment}>
+              <Star />
+              <span>{doctor.averageRating.toFixed(2)}</span>
+              <span>
+                (<span>{doctor.totalVotes}</span> نظر)
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className={styles.address}>
+          <Location />
+          <div>
+            <span>{doctor.address} </span>
+          </div>
+        </div>
+        <div className={styles.wrapperTags}>
+          {doctor.badges
+            ? doctor.badges.map((badge, _i) => (
+                <div key={_i} className={styles.trait}>
+                  {showBadge(badge)}
+                  <span> {badge}</span>
+                </div>
+              ))
+            : null}
+        </div>
+        <button className={styles.turn}>گرفتن نوبت</button>
+      </div>
+    </div>
+  );
 }

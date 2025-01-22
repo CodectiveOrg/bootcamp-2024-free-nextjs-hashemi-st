@@ -13,10 +13,7 @@ type Props = {
   searchParams: SearchParams;
 };
 
-export default function search({
-  searchParams,
-}: Props): ReactElement {
-  
+export default function search({ searchParams }: Props): ReactElement {
   const defaultFilters = generateDefaultFilters(searchParams);
 
   return (
