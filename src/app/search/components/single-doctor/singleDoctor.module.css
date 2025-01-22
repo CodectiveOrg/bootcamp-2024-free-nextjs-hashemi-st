@@ -55,8 +55,8 @@
 
         & .badge {
           position: absolute;
-          bottom: 5px;
-          left: 5px;
+          bottom: 15px;
+          left: 10px;
           color: white;
           width: 20px;
           height: 20px;
@@ -121,5 +121,8 @@
   .info {
     flex-direction: column;
     align-items: flex-start !important;
+  }
+  .trait {
+    padding: 0 !important;
   }
 }

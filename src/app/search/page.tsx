@@ -9,14 +9,16 @@ import { ReactElement } from "react";
 import { FiltersType } from "./types/filters.type";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
-type Pprops = {
-  searchParams: Promise<SearchParams>;
+type Props = {
+  searchParams: SearchParams;
 };
 
-export default async function search({
+export default function search({
   searchParams,
-}: Pprops): Promise<ReactElement> {
-  const defaultFilters = generateDefaultFilters(await searchParams);
+}: Props): ReactElement {
+  
+  const defaultFilters = generateDefaultFilters(searchParams);
+
   return (
     <FiltersProvider defaultFilters={defaultFilters}>
       <DoctorsProvider doctors={doctors}>
@@ -32,8 +34,10 @@ export default async function search({
     </FiltersProvider>
   );
 }
+
 const generateDefaultFilters = (searchParams: SearchParams): FiltersType => {
   const { query, expertise, gender, degree } = searchParams;
+
   return {
     query: normalizeFilter(query),
     expertise: normalizeFilter(expertise),
@@ -41,6 +45,7 @@ const generateDefaultFilters = (searchParams: SearchParams): FiltersType => {
     degree: normalizeFilter(degree),
   };
 };
+
 const normalizeFilter = (
   value: string | string[] | undefined,
 ): string | undefined => {

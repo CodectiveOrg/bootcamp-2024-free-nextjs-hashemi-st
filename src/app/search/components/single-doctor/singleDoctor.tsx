@@ -8,37 +8,34 @@ import { Registered } from "@/assets/svg/registered";
 import styles from "./singleDoctor.module.css";
 
 type ItemProps = {
-  list: DoctorModel[];
+  doctor: DoctorModel;
 };
 
-export default function Item({ list }: ItemProps): ReactElement {
-  return (
-    <>
-      {list.length ? (
-        list.map((li) => (
-          <div className={styles.itemWrapper} key={li.id}>
+export default function Item({ doctor }: ItemProps): ReactElement {
+  return (              
+          <div className={styles.itemWrapper} key={doctor.id}>
             <div className={styles.item}>
               <div className={styles.info}>
                 <div className={styles.avatarWrapper}>
                   <Image
-                    src={`https://cdn.paziresh24.com${li.image}`}
-                    alt=""
+                    src={`https://cdn.paziresh24.com${doctor.image}`}
+                    alt="avatar"
                     className={styles.avatar}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                   />
                   <div className={styles.badge}>
                     <Registered />
                   </div>
                 </div>
                 <div className={styles.descWrapper}>
-                  <div>{li.name} </div>
-                  <div className={styles.brief}>{li.brief} </div>
+                  <div>{doctor.name} </div>
+                  <div className={styles.brief}>{doctor.brief} </div>
                   <div className={styles.comment}>
                     <Star />
-                    <span>{li.averageRating.toFixed(2)}</span>
+                    <span>{doctor.averageRating.toFixed(2)}</span>
                     <span>
-                      (<span>{li.totalVotes}</span> نظر)
+                      (<span>{doctor.totalVotes}</span> نظر)
                     </span>
                   </div>
                 </div>
@@ -46,12 +43,12 @@ export default function Item({ list }: ItemProps): ReactElement {
               <div className={styles.address}>
                 <Location />
                 <div>
-                  <span>{li.address} </span>
+                  <span>{doctor.address} </span>
                 </div>
               </div>
               <div className={styles.wrapperTags}>
-                {li.badges
-                  ? li.badges.map((badge, _i) => (
+                {doctor.badges
+                  ? doctor.badges.map((badge, _i) => (
                       <div key={_i} className={styles.trait}>
                         {showBadge(badge)}
                         <span> {badge}</span>
@@ -62,12 +59,5 @@ export default function Item({ list }: ItemProps): ReactElement {
               <button className={styles.turn}>گرفتن نوبت</button>
             </div>
           </div>
-        ))
-      ) : (
-        <div className={styles.emptyList}>
-          <h3>متاسفانه هیچ دکتری با تخصص موردنظر یافت نشد.</h3>
-        </div>
-      )}
-    </>
-  );
+       )     
 }

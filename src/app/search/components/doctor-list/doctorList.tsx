@@ -8,7 +8,15 @@ export default function DoctorList() {
 
   return (
     <div className={styles.list}>
-      <SingleDoctor list={filteredDoctors} />
+      {filteredDoctors.length ? filteredDoctors.map(doctor=>(
+        <div key={doctor.id}>
+        <SingleDoctor doctor={doctor} />
+        </div>
+      )): (
+        <div className={styles.emptyList}>
+          <h3>متاسفانه هیچ دکتری با تخصص موردنظر یافت نشد.</h3>
+        </div>
+      )}     
     </div>
   );
 }
