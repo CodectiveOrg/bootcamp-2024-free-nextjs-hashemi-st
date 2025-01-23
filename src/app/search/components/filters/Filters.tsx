@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/filters/filters.providers";
-import SelectedFilters from "../selected-filters/SelectedFilters";
-import { FiltersType } from "../../types/filters.type";
+import SelectedFilters from "@/app/search/components/selected-filters/SelectedFilters";
+import { FiltersType } from "@/app/search/types/filters.type";
 import FilterCity from "./components/filter-city/FilterCity";
 import InputFilter from "./components/input-filter/InputFilter";
 import { expertises } from "@/models/expertises";
