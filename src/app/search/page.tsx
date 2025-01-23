@@ -1,5 +1,5 @@
 "use client";
-import DoctorList from "@/app/search/components/doctor-list/DoctorList";
+import DoctorList from "@/app/search/components/doctor-list/doctorList";
 import Filters from "./components/filters/Filters";
 import FiltersProvider from "./providers/filters/filters.providers";
 import DoctorsProvider from "./providers/doctors/doctors.provider";

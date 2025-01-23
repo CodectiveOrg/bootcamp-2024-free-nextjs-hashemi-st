@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DoctorsContext } from "@/app/search/providers/doctors/doctors.provider";
-import SingleDoctor from "../single-doctor/SingleDoctor";
+import SingleDoctor from "../single-doctor/singleDoctor";
 import styles from "./DoctorList.module.css";
 
 export default function DoctorList() {
