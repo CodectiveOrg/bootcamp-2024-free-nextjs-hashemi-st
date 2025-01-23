@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { FiltersContext } from "../../providers/filters/filters.providers";
 import { FiltersType } from "../../types/filters.type";
-import styles from "./selectedFilters.module.css";
+import styles from "./SelectedFilters.module.css";
 
 export default function SelectedFilters() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
