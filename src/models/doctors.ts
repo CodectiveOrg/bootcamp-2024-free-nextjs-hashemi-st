@@ -7,7 +7,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/9b45c32fe70f1321b4b349bc1a5aff9c.jpeg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.7,
     totalVotes: 1973,
     address: "تهران,جردن، بلوار گلشهر ، پلاک 7، طبقه سوم واحد 7",
@@ -24,7 +24,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/ac84246810671c2744de34cb4e938aa2.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.7,
     totalVotes: 147,
     address: "یزد,یزد بلوار جمهوری بیمارستان افشار -کلینیک",
@@ -41,7 +41,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/dc1c321cabe87e09772530d3480d2adc.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.56,
     totalVotes: 318,
     address:
@@ -60,7 +60,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/c3998d645d48d0580494589c72028da2.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.77,
     totalVotes: 178,
     address:
@@ -78,7 +78,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/c0a4da00da796354da26c3b1ed016ab3.png?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.47,
     totalVotes: 134,
     address:
@@ -96,7 +96,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/82a97e2604e388b027fe1380e53e7975.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.38,
     totalVotes: 441,
     address:
@@ -114,7 +114,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/8c981c886725e524c0e0f100ff25f22c.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.83,
     totalVotes: 699,
     address: "تهران,تهران، ولیعصر، حق شناس، پلاک پنج، طبقه همکف",
@@ -131,7 +131,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/52f8f4d6a99df1f215eaf6366976903f.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 5,
     totalVotes: 24,
     address: "ورامین,ورامین، بلوار باهنر، بین هداوند خانی و گل آفتاب",
@@ -148,7 +148,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/e6dcd6f22945150f7345689cff9c7370.jpeg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.67,
     totalVotes: 64,
     address:
@@ -166,7 +166,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/e03322586ab83ce88cbc98c2195157e8.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 3.41,
     totalVotes: 92,
     address: "تبریز,والمان، روبروی هتل فرید",
@@ -183,7 +183,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/e8117aaea59c85615bb7341d74642787.png?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.82,
     totalVotes: 1222,
     address:
@@ -201,7 +201,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/b93bddca7a8589c39013da8f1d67113e.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 5,
     totalVotes: 25,
     address:
@@ -219,7 +219,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/ffe01df9c737d76a59ddd88b564f993e.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.73,
     totalVotes: 32,
     address:
@@ -237,7 +237,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/729f21caa2f2a37e9a38d9f0bc3bfc95.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.79,
     totalVotes: 18,
     address: "خرم آباد,خرم آباد، بلوار شهید شفیع پور، بابک 2 غربی",
@@ -254,7 +254,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/f1d11ac34256ea84614d1f6086a23d0a.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 3.88,
     totalVotes: 30,
     address:
@@ -273,7 +273,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-women/5ba7fa66fb0fc8ab18d19675b1c9347d.jpg?size=150",
     isVerified: true,
-    gender: "male",
+    gender: "مرد",
     averageRating: 4.92,
     totalVotes: 108,
     address: "تهران,تهران، سعادت آباد، خیابان دوم شمالی",
@@ -290,7 +290,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/b6ed21a88e738f7f3484bcb94f541ccd.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 3.92,
     totalVotes: 13,
     address: "شهرکرد,..",
@@ -307,7 +307,7 @@ export const doctors: DoctorModel[] = [
     image:
       "/getImage/p24/search-men/89fc445342ac78f79191e829134c2405.jpg?size=150",
     isVerified: true,
-    gender: "female",
+    gender: "زن",
     averageRating: 4.54,
     totalVotes: 200,
     address:
@@ -335,6 +335,6 @@ export const doctors: DoctorModel[] = [
     expertise: "کودکان و اطفال",
     city: "اردبیل",
     degree: "متخصص",
-    gender: "male",
+    gender: "مرد",
   },
 ];

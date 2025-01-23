@@ -28,6 +28,7 @@ export default function SelectedFilters() {
   if (isEmpty) {
     return null;
   }
+
   return (
     <div className={styles.selectedFilters}>
       <div className={styles.wrapper}>
@@ -75,8 +76,7 @@ export default function SelectedFilters() {
             className={styles.labelFilter}
             onClick={() => filterClickHandler("gender")}
           >
-            {filters.gender === "male" && "مرد"}
-            {filters.gender === "female" && "زن"}
+            {filters.gender}
           </li>
         )}
         {filters.degree && (

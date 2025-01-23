@@ -97,6 +97,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto auto;
 
+  background-color: var(--color-gray-97);
+
   min-block-size: 100vh;
   min-block-size: 100dvh;
 
@@ -111,5 +113,9 @@ body {
     color: var(--color-gray-90);
     padding-block: 0.75rem;
     text-align: center;
+  }
+
+  button {
+    border: none;
   }
 }

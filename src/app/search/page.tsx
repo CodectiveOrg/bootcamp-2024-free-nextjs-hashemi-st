@@ -1,6 +1,6 @@
 "use client";
-import DoctorList from "./components/doctor-list/doctorList";
-import Filter from "./components/filter/filter";
+import DoctorList from "./components/doctor-list/DoctorList";
+import Filters from "./components/filters/Filters";
 import FiltersProvider from "./providers/filters/filters.providers";
 import DoctorsProvider from "./providers/doctors/doctors.provider";
 import styles from "./page.module.css";
@@ -21,7 +21,7 @@ export default function search({ searchParams }: Props): ReactElement {
       <DoctorsProvider doctors={doctors}>
         <div className={styles.page}>
           <div className={styles.filters}>
-            <Filter />
+            <Filters />
           </div>
           <div className={styles.content}>
             <DoctorList />
