@@ -5,7 +5,7 @@ import { showBadge } from "@/assets/functions/showBadge";
 import { Location } from "@/assets/svg/location";
 import { Star } from "@/assets/svg/star";
 import { Registered } from "@/assets/svg/registered";
-import styles from "./SingleDoctor.module.css";
+import styles from "./Doctor.module.css";
 
 type ItemProps = {
   doctor: DoctorModel;
