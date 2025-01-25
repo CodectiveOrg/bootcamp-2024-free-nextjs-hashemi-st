@@ -17,8 +17,6 @@ export default function HeaderComponent(): ReactElement {
   const menuItems: menuItems[] = [
     { id: 1, href: "", title: "خانه" },
     { id: 2, href: "search", title: "جستجو" },
-    { id: 3, href: "about", title: "درباره ما" },
-    { id: 4, href: "contact", title: "تماس با ما" },
   ];
   return (
     <header className={styles.header}>
