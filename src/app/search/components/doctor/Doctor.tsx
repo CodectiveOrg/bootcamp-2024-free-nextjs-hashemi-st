@@ -11,7 +11,7 @@ type ItemProps = {
   doctor: DoctorModel;
 };
 
-export default function SingleDoctor({ doctor }: ItemProps): ReactElement {
+export default function Doctor({ doctor }: ItemProps): ReactElement {
   return (
     <div className={styles.item} key={doctor.id}>
       <div className={styles.info}>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FiltersContext } from "@/app/search/providers/filters/filters.providers";
-import SelectedFilters from "@/app/search/components/selected-filters/Selected";
+import Selected from "@/app/search/components/selected/Selected";
 import { FiltersType } from "@/app/search/types/filters.type";
 import FilterCity from "./components/filter-city/FilterCity";
 import InputFilter from "./components/input-filter/InputFilter";
@@ -22,7 +22,7 @@ export default function Filter() {
 
   return (
     <div className={styles.filterWrapper}>
-      <SelectedFilters />
+      <Selected />
 
       <div className={styles.wrapperExpert}>
         <InputFilter

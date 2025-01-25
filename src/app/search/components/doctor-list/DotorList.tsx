@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { DoctorsContext } from "@/app/search/providers/doctors/doctors.provider";
-import SingleDoctor from "../single-doctor/Doctor";
-import styles from "./Doctor.module.css";
+import Doctor from "../doctor/Doctor";
+import styles from "./DoctorList.module.css";
 
 export default function DoctorList() {
   const { filteredDoctors } = useContext(DoctorsContext);
@@ -11,7 +11,7 @@ export default function DoctorList() {
       {filteredDoctors.length ? (
         filteredDoctors.map((doctor) => (
           <div key={doctor.id}>
-            <SingleDoctor doctor={doctor} />
+            <Doctor doctor={doctor} />
           </div>
         ))
       ) : (

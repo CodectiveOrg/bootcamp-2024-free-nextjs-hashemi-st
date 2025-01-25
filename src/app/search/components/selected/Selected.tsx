@@ -3,7 +3,7 @@ import { FiltersContext } from "../../providers/filters/filters.providers";
 import { FiltersType } from "../../types/filters.type";
 import styles from "./Selected.module.css";
 
-export default function SelectedFilters() {
+export default function Selected() {
   const { filters, dispatchFilters } = useContext(FiltersContext);
 
   const isEmpty = useMemo(() => {
