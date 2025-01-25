@@ -26,6 +26,7 @@
   --color-primary-opposite: var(--color-gray-99);
 
   --color-danger: hsl(10deg 80% 48%);
+  --color-success: hsl(164, 22%, 73%);
   --color-danger-fade: hsl(10deg 80% 96%);
   --color-danger-lighter: hsl(10deg 80% 52%);
   --color-danger-darker: hsl(10deg 80% 44%);
@@ -35,7 +36,7 @@
 
   --color-border: var(--color-gray-80);
 
-  --light-green: #f4fbf4;
+  --light-footer: hsl(120, 47%, 97%);
 
   --shadow-300: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--light-green);
+  background-color: var(--light-footer);
 
   display: grid;
   grid-template-areas: "writings visuals" "copy copy";
