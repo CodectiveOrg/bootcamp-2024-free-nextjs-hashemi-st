@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { DoctorModel } from "@/models/doctor.model";
 import { showBadge } from "@/assets/functions/showBadge";
 import { Location } from "@/assets/svg/location";
@@ -55,7 +56,7 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
             ))
           : null}
       </div>
-      <button className={styles.turn}>گرفتن نوبت</button>
+      <Link href={`/doctor/${doctor.id}`} className={styles.turn}>گرفتن نوبت</Link>
     </div>
   );
 }
