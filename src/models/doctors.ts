@@ -1,5 +1,6 @@
 import { DoctorModel } from "@/models/doctor.model";
-
+import user1 from "@/assets/images/user1.jpg"
+import user2 from "@/assets/images/user2.jpg"
 export const doctors: DoctorModel[] = [
   {
     id: "76b55838",
@@ -17,6 +18,35 @@ export const doctors: DoctorModel[] = [
     expertise: "عفونی",
     badges: ["کمترین معطلی"],
     city: "تهران",
+    code: 58549,
+    experience: 29,
+    phone: "021-78561234",
+    comments: [
+      {
+        user: "علی رضایی",
+        image: user1,
+        comment: "دکتر بسیار خوش برخورد و حرفه‌ای بودند.",
+        date: "2025-01-15",
+        visited: true,
+        answer : "سلامت باشید"
+      },
+      {
+        user: "سارا حسینی",
+        image: user2,
+        comment: "وقت‌دهی به‌موقع انجام شد و مشکلی نداشتم.",
+        date: "2025-01-12",
+        visited: true,
+        answer : "سلامت باشید"
+      },
+      {
+        user: "محمد کریمی",
+        image: user1,
+        comment: "مشاوره خوب بود ولی داروها کمی گران بودند.",
+        date: "2025-01-18",
+        visited: true,
+        answer:""
+      },
+    ]
   },
   {
     id: "61ea57d2",
@@ -34,6 +64,27 @@ export const doctors: DoctorModel[] = [
     expertise: "قلب و عروق",
     badges: [],
     city: "یزد",
+    code: 138229,
+    experience: 11,
+    phone: "035-49872301",
+    comments:[
+      {
+        user: "فاطمه رحمانی",
+        image: user2,
+        comment: "نوبت‌دهی بسیار کند بود، پیشنهاد نمی‌کنم.",
+        date: "2025-01-20",
+        visited: false,
+        answer:""
+      },
+      {
+        user: "رضا محمدی",
+        image: user1,
+        comment: "همه چیز عالی بود، خیلی راضی هستم.",
+        date: "2025-01-14",
+        visited: true,
+        answer : "تشکر"
+      },
+    ]
   },
   {
     id: "e408016a",
@@ -53,6 +104,29 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
     city: "قم",
+    code: 39843,
+    experience: 15,
+    phone: "025-23654789",
+    comments:[
+      
+      {
+        user: "نرگس",
+        image: user2,
+        comment: "دکتر خیلی به حرف‌ها گوش می‌دهند و دقیق هستند.",
+        date: "2025-01-10",
+        visited: true,
+        answer : "تشکر"
+
+      },
+      {
+       user: "حمید توکلی",
+       image: user1,
+        comment: "تجربه خیلی خوبی داشتم، برخورد منشی خوب بود.",
+       date: "2025-01-08",
+        visited: false,
+        answer:""
+      },
+        ]
   },
   {
     id: "1a8daf37",
@@ -71,6 +145,20 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: [],
     city: "علی آباد",
+    code: 163323,
+    experience: 7,
+    phone: "173-80915672",
+    comments: [
+      {
+        user: "امین",
+        image: user1,
+        comment: "توضیحات کامل و مفیدی دریافت کردم.",
+        date: "2025-01-07",
+        visited: true,
+        answer : "تشکر"
+
+      }
+    ]
   },
   {
     id: "973ef75f",
@@ -89,6 +177,28 @@ export const doctors: DoctorModel[] = [
     expertise: "تغذیه",
     badges: ["کمترین معطلی"],
     city: "اهواز",
+    code: 8492,
+    experience: 11,
+    phone: "061-67382940",
+    comments:[
+      {
+        user: "مینا جعفری",
+        image: user2,
+        comment: "دکتر وقت زیادی برای بیمارها نمی‌گذارند.",
+        date: "2025-01-09",
+        visited: false,
+        answer:""
+      },
+      {
+        user: "حسین افشار",
+        image: user1,
+        comment: "محیط تمیز و آرامش‌بخشی بود.",
+        date: "2025-01-16",
+        visited: true,
+        answer : "تشکر"
+
+      },
+    ]
   },
   {
     id: "2b52cf72",
@@ -107,6 +217,28 @@ export const doctors: DoctorModel[] = [
     expertise: "طب سنتی",
     badges: ["کمترین معطلی"],
     city: "تهران",
+    code: 54763,
+    experience: 30,
+    phone: "021-52918736",
+    comments:[
+      {
+        user: "زهرا احمدی",
+        image: user2,
+        comment: "دکتر با حوصله همه چیز را توضیح دادند.",
+        date: "2025-01-19",
+        visited: true,
+        answer : "سلامت باشید"
+
+      },
+      {
+        user: "مهدی",
+        image: user1,
+        comment: "مشکلم به خوبی برطرف شد. تشکر!",
+        date: "2025-01-05",
+       visited: true,
+       answer:""
+      },
+    ]
   },
   {
     id: "baeeab42",
@@ -124,6 +256,10 @@ export const doctors: DoctorModel[] = [
     expertise: "پزشک عمومی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
     city: "تهران",
+    code: 185923,
+    experience: 22,
+    phone: "021-31467289",
+    comments:[]
   },
   {
     id: "d476e2fd",
@@ -141,6 +277,37 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
     city: "ورامین",
+    code: 58898,
+    experience:19,
+    phone: "021-98273014",
+    comments:[
+      {
+        user: "احسان اسکندری",
+        image: user2,
+        comment: "نوبت‌دهی خیلی سریع بود، راضی هستم.",
+        date: "2025-01-17",
+        visited: true,
+        answer : "سلامت باشید"
+
+      },
+      {
+        user: "جواد",
+        image: user1,
+        comment: "تشخیص خیلی خوب بود و داروها جواب دادند.",
+        date: "2025-01-11",
+        visited: true,
+        answer : "سلامت باشید"
+
+      },
+      {
+        user: "Sima Ranjbar",
+        image: user2,
+        comment: "متاسفانه برخورد اصلاً مناسب نبود.",
+        date: "2025-01-13",
+        visited: false,
+        answer:""
+      },
+    ]
   },
   {
     id: "da8a5af6",
@@ -159,6 +326,10 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["کمترین معطلی"],
     city: "بجنورد",
+    code: 43898,
+    experience: 12,
+    phone: "058-76190543",
+    comments:[ ]
   },
   {
     id: "98577481",
@@ -176,6 +347,28 @@ export const doctors: DoctorModel[] = [
     expertise: "جراحی دهان و دندان",
     badges: ["کمترین معطلی"],
     city: "تبریز",
+    code: 5698,
+    experience:16,
+    phone: "041-42815639",
+    comments:[
+      {
+        user: "یاسمین توانا",
+        image: user2,
+        comment: "برای اولین بار مراجعه کردم و کاملاً راضی بودم.",
+        date: "2025-01-06",
+        visited: true,
+        answer : "تشکر"
+
+      },
+      {
+        user: "احسان",
+        image: user1,
+        comment: "محیط خیلی شلوغ بود و من نوبت را کنسل کردم.",
+        date: "2025-01-03",
+        visited: false,
+        answer:""
+      }
+    ]
   },
   {
     id: "8cec9d31",
@@ -194,6 +387,19 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
     city: "زنجان",
+    code: 58228,
+    experience:20, 
+    phone: "024-50489271",
+    comments:[
+      {
+        user: "شیرین امینی",
+        image: user2,
+        comment: "مشکلات من به خوبی توضیح داده شد.",
+        date: "2025-01-04",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "97421b53",
@@ -212,6 +418,19 @@ export const doctors: DoctorModel[] = [
     expertise: "توانبخشی",
     badges: ["منتخب پذیرش24", "خوش برخورد", "کمترین معطلی"],
     city: "اسلامشهر",
+    code: 48296,
+    experience:16,
+    phone: "021-83746120",
+    comments:[
+      {
+        user: "پارسا",
+        image: user1,
+        comment: "بسیار راضی بودم، پیشنهاد می‌کنم.",
+        date: "2025-01-21",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "a70497d6",
@@ -230,6 +449,19 @@ export const doctors: DoctorModel[] = [
     expertise: "توانبخشی",
     badges: ["کمترین معطلی"],
     city: "رشت",
+    code: 89318,
+    experience:11,
+    phone: "033-29147836",
+    comments:[
+      {
+        user: "لیلا اعتمادی",
+        image: user2,
+        comment: "دکتر با صبر و حوصله پاسخگو بودند.",
+        date: "2025-01-02",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "2b8367b3",
@@ -247,6 +479,19 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
     city: "خرم آباد",
+    code: 13828,
+    experience:8,
+    phone: "066-68023914",
+    comments:[
+      {
+        user: "نازی",
+        image: user2,
+        comment: "با صبر و حوصله پاسخگو بودند.",
+        date: "2025-01-02",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "974248f5",
@@ -266,6 +511,10 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["خوش برخورد", "کمترین معطلی"],
     city: "بندرعباس",
+    code: 48768,
+    experience:29,
+    phone: "076-74391562",
+    comments:[]
   },
   {
     id: "9ce1d81f",
@@ -283,6 +532,19 @@ export const doctors: DoctorModel[] = [
     expertise: "مغز و اعصاب",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
     city: "تهران",
+    code: 57798,
+    experience:25,
+    phone: "021-49027381",
+    comments:[
+      {
+        user: "نیما",
+        image: user1,
+        comment: "دکتر خوبی هستند.",
+        date: "2025-01-02",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "56909296",
@@ -300,6 +562,19 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: ["منتخب پذیرش24", "کمترین معطلی"],
     city: "شهرکرد",
+    code: 55598,
+    experience:17,
+    phone: "038-65482907",
+    comments:[
+      {
+        user: "لیلا اعتمادی",
+        image: user2,
+        comment: "دکتر با صبر و حوصله پاسخگو بودند.",
+        date: "2025-01-02",
+        visited: true,
+        answer:""
+      }
+    ]
   },
   {
     id: "3f9b752a",
@@ -318,6 +593,10 @@ export const doctors: DoctorModel[] = [
     expertise: "زنان، زایمان و نازایی",
     badges: [],
     city: "تهران",
+    code: 48844,
+    experience:15,
+    phone:"021-37290615",
+    comments:[]
   },
   {
     id: "e6719f23",
@@ -336,5 +615,9 @@ export const doctors: DoctorModel[] = [
     city: "اردبیل",
     degree: "متخصص",
     gender: "مرد",
+    code: 56832,
+    experience:13,
+    phone:"051-86019432",
+    comments:[]
   },
 ];

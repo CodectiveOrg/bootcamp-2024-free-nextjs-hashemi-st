@@ -1,0 +1,11 @@
+.about {
+    text-align: justify;
+    line-height: 2;
+}
+.title {
+    background: var(--color-primary-middle);
+    padding:  0 .25rem;
+    border-radius: .75rem;
+    line-height: 2;
+    font-weight: 500;
+}

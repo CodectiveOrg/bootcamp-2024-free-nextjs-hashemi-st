@@ -1,0 +1,26 @@
+.pageContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+    font-size: var(--fz-300);
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .wrapperComments {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background-color: var(--color-gray-99);
+            border-radius: .5rem;
+            padding: var(--full-width-padding-inline);
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .pageContent {
+        grid-template-columns: 1fr;
+    }
+}
