@@ -28,9 +28,11 @@ export default function page({ params }: Props): ReactElement {
                 <SummaryComment doctor={doctor} />
                 <div className={styles.wrapperComments}>
                     <h4>نظرات در مورد دکتر  {doctor.name}</h4>
-                   
-                    {doctor?.comments.map(comment => (
-                        <Comment doctor={doctor} comment={comment} />
+
+                    {doctor?.comments.map((comment, i) => (
+                        <div key={i}>
+                            <Comment doctor={doctor} comment={comment} />
+                        </div>
                     ))}
                 </div>
             </div>
