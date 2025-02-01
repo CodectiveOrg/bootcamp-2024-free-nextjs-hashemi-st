@@ -1,55 +1,52 @@
 .wrapperComments {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-gray-99);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-gray-99);
+  border-radius: 0.5rem;
+  padding: var(--full-width-padding-inline);
+
+  .filters {
+    display: flex;
+    width: 100%;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+
+    & select {
+      flex: 1;
+      border-radius: 0.5rem;
+      border-color: var(--color-gray-80);
+      color: var(--color-gray-40);
+      box-shadow: var(--shadow-400);
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .searchBox {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     border-radius: 0.5rem;
-    padding: var(--full-width-padding-inline);
+    border: 1px solid var(--color-gray-80);
 
-    .filters {
-        display: flex;
-        width: 100%;
-        gap: .25rem;
-        margin-top: .5rem;
-
-        & select {
-            flex: 1;
-            border-radius: .5rem;
-            border-color: var(--color-gray-80);
-            color: var(--color-gray-40);
-            box-shadow: var(--shadow-400);
-            width: 100%;
-            padding: .5rem .75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            outline: none;
-            cursor: pointer;
-        }
-
-
-
+    input {
+      border: none;
+      outline: none;
     }
-
-    .searchBox {
-        margin: .5rem 0;
-        padding: .5rem .75rem;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        border-radius: .5rem;
-        border: 1px solid var(--color-gray-80);
-
-        input {
-            border: none;
-            outline: none
-        }
-    }
-    .isEmpty {
-        color: var(--color-gray-99);
-        background-color: var(--color-danger-lighter);
-        border-radius: .5rem;
-        padding: .75rem;
-        font-weight: 600;
-        text-align: center;
-    }
+  }
+  .isEmpty {
+    color: var(--color-gray-99);
+    background-color: var(--color-danger-lighter);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
 }

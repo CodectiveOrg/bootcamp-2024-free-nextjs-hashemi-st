@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from "./CommentList.module.css";
 import { useComment } from "@/app/search/providers/comments/comments.provider";
 import { DoctorModel } from "@/models/doctor.model";
@@ -16,20 +16,20 @@ export default function CommentList({ doctor }: Props) {
     setSearchValue,
     sortOrder,
     setSortOrder,
-    filteredComments
+    filteredComments,
   } = useComment();
 
-function isComment() {
-  if(filteredComments.length === 0){
-    return <div className={styles.isEmpty}>موردی یافت نشد!</div>
-  } else {
-    return filteredComments.map((comment, i) => (
-      <div key={i}>
-        <Comment doctor={doctor} comment={comment} />
-      </div>
-    ))
+  function isComment() {
+    if (filteredComments.length === 0) {
+      return <div className={styles.isEmpty}>موردی یافت نشد!</div>;
+    } else {
+      return filteredComments.map((comment, i) => (
+        <div key={i}>
+          <Comment doctor={doctor} comment={comment} />
+        </div>
+      ));
+    }
   }
-}
 
   return (
     <div className={styles.wrapperComments}>
@@ -43,16 +43,22 @@ function isComment() {
             else if (value === "visited") setFilterVisitedStatus(true);
             else setFilterVisitedStatus(false);
           }}
-          value={filterVisitedStatus === null ? "all" : filterVisitedStatus ? "visited" : "user"}
+          value={
+            filterVisitedStatus === null
+              ? "all"
+              : filterVisitedStatus
+                ? "visited"
+                : "user"
+          }
         >
           <option value="all">همه نظرات</option>
           <option value="visited">ویزیت شده</option>
           <option value="user">کاربر عادی</option>
         </select>
 
-        <select 
-        value={sortOrder} 
-        onChange={e => setSortOrder(e.target.value as "asc" | "desc")}
+        <select
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value as "asc" | "desc")}
         >
           <option value="asc">امتیاز صعودی</option>
           <option value="desc">امتیاز نزولی</option>
@@ -65,10 +71,9 @@ function isComment() {
           type="text"
           placeholder="جستجو در نظرات..."
           value={searchValue}
-          onChange={e => setSearchValue(e.target.value)}
+          onChange={(e) => setSearchValue(e.target.value)}
         />
       </div>
-
       {isComment()}
     </div>
   );

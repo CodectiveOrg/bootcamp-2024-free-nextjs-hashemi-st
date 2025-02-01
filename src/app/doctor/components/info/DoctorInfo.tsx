@@ -20,8 +20,8 @@ export default function DoctorInfo({ doctor }: Props) {
             src={`https://cdn.paziresh24.com${doctor.image}`}
             alt=""
             className={styles.avatar}
-            width={150}
-            height={150}
+            width={100}
+            height={100}
           />
         </div>
         <div>

@@ -6,7 +6,7 @@ export type Comments = {
   date: string;
   visited: boolean;
   answer: string;
-  point: number
+  point: number;
 };
 
 export type DoctorModel = {

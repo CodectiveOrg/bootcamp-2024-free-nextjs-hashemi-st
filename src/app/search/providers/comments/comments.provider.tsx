@@ -19,13 +19,12 @@ interface CommentContextType {
 
 export const CommentContext = createContext<CommentContextType>({
   searchValue: "",
-  setSearchValue: () => { },
+  setSearchValue: () => {},
   filteredComments: [],
   filterVisitedStatus: true,
-  setFilterVisitedStatus: () => { },
+  setFilterVisitedStatus: () => {},
   sortOrder: "asc",
-  setSortOrder: () => { }
-
+  setSortOrder: () => {},
 });
 
 type Props = PropsWithChildren<{
@@ -34,18 +33,24 @@ type Props = PropsWithChildren<{
 
 export const CommentsProvider = ({ children, comments }: Props) => {
   const [searchValue, setSearchValue] = useState<string>("");
-  const [filterVisitedStatus, setFilterVisitedStatus] = useState<boolean | null>(null);
+  const [filterVisitedStatus, setFilterVisitedStatus] = useState<
+    boolean | null
+  >(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 
   const filteredComments = useMemo(() => {
     return comments
       .filter((comment) =>
-        comment.comment.toLowerCase().includes(searchValue.toLowerCase())
+        comment.comment.toLowerCase().includes(searchValue.toLowerCase()),
       )
       .filter((comment) =>
-        filterVisitedStatus === null ? true : comment.visited === filterVisitedStatus
+        filterVisitedStatus === null
+          ? true
+          : comment.visited === filterVisitedStatus,
       )
-      .sort((a, b) => (sortOrder === "asc" ? a.point - b.point : b.point - a.point));
+      .sort((a, b) =>
+        sortOrder === "asc" ? a.point - b.point : b.point - a.point,
+      );
   }, [searchValue, filterVisitedStatus, sortOrder, comments]);
 
   return (
