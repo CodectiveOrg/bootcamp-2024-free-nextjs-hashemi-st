@@ -1,12 +1,12 @@
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/image";
 export type Comments = {
   user: string;
   image: StaticImageData;
   comment: string;
   date: string;
   visited: boolean;
-  answer: string
-}
+  answer: string;
+};
 
 export type DoctorModel = {
   id: string;
@@ -26,5 +26,5 @@ export type DoctorModel = {
   code: number;
   experience: number;
   phone: string;
-  comments: Comments[]
+  comments: Comments[];
 };

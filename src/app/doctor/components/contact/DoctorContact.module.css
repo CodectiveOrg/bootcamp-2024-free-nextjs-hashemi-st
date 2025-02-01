@@ -1,23 +1,19 @@
 .title {
-    border-right: 3px solid var(--color-primary-middle);
-    padding-right: .5rem;
+  border-right: 3px solid var(--color-primary-middle);
+  padding-right: 0.5rem;
 }
 .contact {
-   
-    padding: .75rem;
-    border-radius: .75rem;
-    .backColor {
-      
-        
-             .phone, .address {
-          background: var(--color-primary-middle);
-         border-radius: .75rem;
-       
-        text-align: center;
-        padding:.75rem .25rem;
-        margin-bottom:.75rem;
-    } 
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  .backColor {
+    .phone,
+    .address {
+      background: var(--color-primary-middle);
+      border-radius: 0.75rem;
+
+      text-align: center;
+      padding: 0.75rem 0.25rem;
+      margin-bottom: 0.75rem;
     }
-
+  }
 }
-

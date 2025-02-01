@@ -1,38 +1,36 @@
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: .75rem;
-    margin-bottom: .75rem;
-    background: var(--color-primary-middle);
-    padding: .75rem;
-    border-radius: var(--border-radius);
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--color-primary-middle);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
 }
 .wrapper {
-    display: flex;
-    align-items: center;
-    gap: .25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 .chat {
- display: flex; 
- align-items: center;  
- gap: .25rem;
- cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
 
-
- span {
-    margin-left: .25rem;
-     &:hover {
-    opacity: .5;
- }
- }
+  span {
+    margin-left: 0.25rem;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .viButton {
-    background-color: var(--color-primary);
-    color: var(--color-primary-fade);
-&:hover {
-   color: var(--color-gray-20); 
-}
+  background-color: var(--color-primary);
+  color: var(--color-primary-fade);
+  &:hover {
+    color: var(--color-gray-20);
+  }
 }

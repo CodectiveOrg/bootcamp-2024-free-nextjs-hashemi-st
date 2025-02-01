@@ -22,7 +22,7 @@
   --color-primary: hsl(200deg 90% 46%);
   --color-primary-fade: hsl(200deg 90% 96%);
   --color-primary-lighter: hsl(200deg 90% 50%);
-  --color-primary-middle: hsl(210,40%,96.08%);
+  --color-primary-middle: hsl(210, 40%, 96.08%);
   --color-primary-darker: hsl(200deg 90% 42%);
   --color-primary-opposite: var(--color-gray-99);
 
@@ -57,7 +57,7 @@
   --animation-duration-normal: 0.5s;
   --animation-duration-slow: 1s;
 
-  --font-small: .75rem
+  --font-small: 0.75rem;
 }
 
 *,

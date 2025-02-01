@@ -16,7 +16,6 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
   return (
     <div className={styles.item} key={doctor.id}>
       <div className={styles.info}>
-
         <div className={styles.avatarWrapper}>
           <Image
             src={`https://cdn.paziresh24.com${doctor.image}`}
@@ -39,7 +38,7 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
               (<span>{doctor.totalVotes}</span> نظر)
             </span>
           </div>
-        </div>      
+        </div>
       </div>
       <div className={styles.address}>
         <Location />
@@ -57,7 +56,9 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
             ))
           : null}
       </div>
-      <Link href={`/doctor/${doctor.id}`} className={styles.turn}>گرفتن نوبت</Link>
+      <Link href={`/doctor/${doctor.id}`} className={styles.turn}>
+        گرفتن نوبت
+      </Link>
     </div>
   );
 }
