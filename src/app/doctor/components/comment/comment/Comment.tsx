@@ -2,10 +2,12 @@ import { DoctorModel, Comments } from "@/models/doctor.model";
 import Image from "next/image";
 import { Plasmic } from "@/assets/svg/Plasmic";
 import styles from "./Comment.module.css";
+
 type Props = {
   doctor: DoctorModel;
   comment: Comments;
 };
+
 export default function Comment({ doctor, comment }: Props) {
   return (
     <div className={styles.commentList}>
@@ -35,7 +37,7 @@ export default function Comment({ doctor, comment }: Props) {
             </div>
           </div>
         </div>
-        <Plasmic />
+        <div className={styles.point}>{comment.point}</div>
       </div>
 
       <div className={styles.comment}>{comment.comment}</div>

@@ -28,6 +28,17 @@
         }
       }
     }
+    .point {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: var(--color-primary);
+      text-align: center;
+      border-top-left-radius: .35rem;
+      border-top-right-radius: .35rem;
+      border-bottom-left-radius: .35rem;
+      color: var(--color-gray-99);
+      line-height: 2;
+     }
   }
 
   .comment {
@@ -39,5 +50,13 @@
     padding: var(--full-width-padding-inline);
     background: var(--color-primary-middle);
     border-radius: var(--border-radius);
+  }
+}
+@media (max-width: 680px) {
+  .flexItem {
+    flex-direction: column;
+  }
+  .avatar {
+    align-self: baseline;
   }
 }

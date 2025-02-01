@@ -29,6 +29,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-15",
         visited: true,
         answer: "سلامت باشید",
+        point: 5
       },
       {
         user: "سارا حسینی",
@@ -37,6 +38,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-12",
         visited: true,
         answer: "سلامت باشید",
+        point: 5
       },
       {
         user: "محمد کریمی",
@@ -45,6 +47,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-18",
         visited: true,
         answer: "",
+        point: 4.5
       },
     ],
   },
@@ -75,6 +78,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-20",
         visited: false,
         answer: "",
+        point: 3
       },
       {
         user: "رضا محمدی",
@@ -83,6 +87,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-14",
         visited: true,
         answer: "تشکر",
+        point: 5
       },
     ],
   },
@@ -115,6 +120,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-10",
         visited: true,
         answer: "تشکر",
+        point: 4.5
       },
       {
         user: "حمید توکلی",
@@ -123,6 +129,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-08",
         visited: false,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -154,6 +161,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-07",
         visited: true,
         answer: "تشکر",
+        point: 4.2
       },
     ],
   },
@@ -185,6 +193,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-09",
         visited: false,
         answer: "",
+        point: 2
       },
       {
         user: "حسین افشار",
@@ -193,6 +202,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-16",
         visited: true,
         answer: "تشکر",
+        point: 4
       },
     ],
   },
@@ -224,6 +234,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-19",
         visited: true,
         answer: "سلامت باشید",
+        point: 5
       },
       {
         user: "مهدی",
@@ -232,6 +243,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-05",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -283,6 +295,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-17",
         visited: true,
         answer: "سلامت باشید",
+        point: 5
       },
       {
         user: "جواد",
@@ -291,6 +304,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-11",
         visited: true,
         answer: "سلامت باشید",
+        point: 5
       },
       {
         user: "Sima Ranjbar",
@@ -299,6 +313,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-13",
         visited: false,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -351,6 +366,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-06",
         visited: true,
         answer: "تشکر",
+        point: 5
       },
       {
         user: "احسان",
@@ -359,6 +375,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-03",
         visited: false,
         answer: "",
+        point: 2.5
       },
     ],
   },
@@ -390,6 +407,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-04",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -421,6 +439,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-21",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -452,6 +471,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-02",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -482,6 +502,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-02",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -535,6 +556,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-02",
         visited: true,
         answer: "",
+        point: 4.5
       },
     ],
   },
@@ -565,6 +587,7 @@ export const doctors: DoctorModel[] = [
         date: "2025-01-02",
         visited: true,
         answer: "",
+        point: 5
       },
     ],
   },
@@ -588,7 +611,17 @@ export const doctors: DoctorModel[] = [
     code: 48844,
     experience: 15,
     phone: "021-37290615",
-    comments: [],
+    comments: [
+      {
+        user: "لیلا اعتمادی",
+        image: user2,
+        comment: "دکتر با صبر و حوصله پاسخگو بودند.",
+        date: "2025-01-02",
+        visited: true,
+        answer: "",
+        point: 5
+      },
+    ],
   },
   {
     id: "e6719f23",
@@ -610,6 +643,16 @@ export const doctors: DoctorModel[] = [
     code: 56832,
     experience: 13,
     phone: "051-86019432",
-    comments: [],
+    comments: [
+      {
+        user: "لیلا اعتمادی",
+        image: user2,
+        comment: "دکتر با صبر و حوصله پاسخگو بودند.",
+        date: "2025-01-02",
+        visited: true,
+        answer: "",
+        point: 5
+      },
+    ]
   },
 ];
