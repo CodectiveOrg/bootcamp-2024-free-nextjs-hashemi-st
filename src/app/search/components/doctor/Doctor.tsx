@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { DoctorModel } from "@/models/doctor.model";
 import { showBadge } from "@/assets/functions/showBadge";
 import { Location } from "@/assets/svg/location";
@@ -23,13 +24,13 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
             width={100}
             height={100}
           />
-          <div className={styles.badge}>
+          <div className={styles.registered}>
             <Registered />
           </div>
         </div>
         <div className={styles.descWrapper}>
-          <div>{doctor.name} </div>
-          <div className={styles.brief}>{doctor.brief} </div>
+          <div> {doctor.name} </div>
+          <div> {doctor.brief} </div>
           <div className={styles.comment}>
             <Star />
             <span>{doctor.averageRating.toFixed(2)}</span>
@@ -55,7 +56,9 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
             ))
           : null}
       </div>
-      <button className={styles.turn}>گرفتن نوبت</button>
+      <Link href={`/doctor/${doctor.id}`} className={styles.turn}>
+        گرفتن نوبت
+      </Link>
     </div>
   );
 }

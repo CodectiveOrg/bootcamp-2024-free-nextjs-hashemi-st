@@ -1,0 +1,19 @@
+.pageContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+  font-size: var(--fz-300);
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .pageContent {
+    grid-template-columns: 1fr;
+  }
+}
