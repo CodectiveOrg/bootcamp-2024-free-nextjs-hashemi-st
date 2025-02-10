@@ -69,6 +69,11 @@
   padding: 0;
 }
 
+html {
+  font-family: "Vazirmatn", system-ui;
+  font-feature-settings: "ss01";
+}
+
 input,
 label,
 select,
@@ -126,3 +131,4 @@ body {
     cursor: pointer;
   }
 }
+
