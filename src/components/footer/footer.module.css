@@ -33,6 +33,7 @@
     .socials {
       display: flex;
       gap: 1rem;
+      color: var(--color-gray-40);
 
       > li {
         a {

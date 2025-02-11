@@ -16,7 +16,7 @@ export default function FooterComponent(): ReactElement {
   return (
     <footer className={styles.footer}>
       <div className={styles.writings}>
-        <div className={styles.logo}>چکاپ فایند</div>
+        <div className={styles.logo}>چکاپ‌فایند</div>
         <p className={styles.description}>
           بهترین مرجع جستجوی پزشکان سراسر کشور
         </p>
@@ -67,7 +67,7 @@ export default function FooterComponent(): ReactElement {
         تمامی حقوق مادی و معنوی این وبسایت، خدمات و محتوای مربوط به آن متعلق به
         سایت{" "}
         <Link style={{ color: "var(--color-primary)" }} href="/">
-          چکاپ فایند
+          چکاپ‌فایند
         </Link>{" "}
         می باشد.
       </p>

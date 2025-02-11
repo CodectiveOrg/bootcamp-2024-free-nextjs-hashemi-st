@@ -14,7 +14,7 @@ type Props = {
 export default function FilterCity({ filters, handleFilterChange }: Props) {
   return (
     <div className={styles.wrapperCity}>
-      <div>انتخاب شهر </div>
+      <h4>انتخاب شهر </h4>
       <select
         value={filters.city}
         onChange={(event) => handleFilterChange(event, "city")}

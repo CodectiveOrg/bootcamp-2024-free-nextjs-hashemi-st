@@ -89,7 +89,7 @@
   }
 
   .turn {
-    background-color: var(--color-success);
+    background-color: var(--color-primary);
     border-radius: 0.25rem;
     padding: 0.25rem;
     border: none;

@@ -26,7 +26,7 @@ export default function FilterBadges({
 }: Props) {
   return (
     <>
-      <div className={styles.title}>{title}</div>
+      <h4 className={styles.title}>{title}</h4>
       {options.map((option) => (
         <label key={option} className={styles.filterLabel}>
           <input

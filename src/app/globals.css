@@ -20,6 +20,7 @@
   --color-text-700: var(--color-gray-40);
 
   --color-primary: hsl(200deg 90% 46%);
+  --color-secondary: hsl(160deg 50% 50%);
   --color-primary-fade: hsl(200deg 90% 96%);
   --color-primary-lighter: hsl(200deg 90% 50%);
   --color-primary-middle: hsl(210, 40%, 96.08%);
@@ -106,7 +107,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto auto;
 
-  background-color: var(--color-gray-97);
+  background-color: var(--color-gray-93);
 
   min-block-size: 100vh;
   min-block-size: 100dvh;
