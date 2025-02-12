@@ -25,11 +25,17 @@
       gap: 1rem;
 
       >li {
-        background-color: var(--color-gray-93);
+        background-color: var(--color-gray-99);
         padding: 0.25rem 0.75rem;
         font-size: var(--fz-200);
         border-radius: 999rem;
+        cursor: pointer;
       }
     }
+  }
+}
+@media (max-width: 680px) {
+  .history {
+    flex-direction: column;
   }
 }

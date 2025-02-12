@@ -19,8 +19,7 @@
   --color-text-400: var(--color-gray-10);
   --color-text-700: var(--color-gray-40);
 
-  --color-primary: hsl(200deg 90% 46%);
-  --color-secondary: hsl(160deg 50% 50%);
+  --color-primary: hsl(164, 22%, 63%);
   --color-primary-fade: hsl(200deg 90% 96%);
   --color-primary-lighter: hsl(200deg 90% 50%);
   --color-primary-middle: hsl(210, 40%, 96.08%);
@@ -28,7 +27,7 @@
   --color-primary-opposite: var(--color-gray-99);
 
   --color-danger: hsl(10deg 80% 48%);
-  --color-success: hsl(164, 22%, 73%);
+  --color-success:  hsl(160deg 50% 50%);
   --color-danger-fade: hsl(10deg 80% 96%);
   --color-danger-lighter: hsl(10deg 80% 52%);
   --color-danger-darker: hsl(10deg 80% 44%);

@@ -19,11 +19,18 @@ export function filtersReducer(filters: FiltersType, action: FiltersAction) {
     case "updated_filter": {
       return { ...filters, [action.key]: action.value };
     }
+
     case "removed_filter": {
       const clonedFilters = { ...filters };
       delete clonedFilters[action.key];
+
+      if (action.key === "city") {
+        return { ...clonedFilters, city: "همه شهرها" };
+      }
+
       return clonedFilters;
     }
+
     case "removed_all": {
       return {};
     }

@@ -15,50 +15,54 @@ type ItemProps = {
 export default function Doctor({ doctor }: ItemProps): ReactElement {
   return (
     <div className={styles.item} key={doctor.id}>
-      <div className={styles.info}>
-        <div className={styles.avatarWrapper}>
-          <Image
-            src={`https://cdn.paziresh24.com${doctor.image}`}
-            alt="avatar"
-            className={styles.avatar}
-            width={100}
-            height={100}
-          />
-          <div className={styles.registered}>
-            <Registered />
+      <div>
+        <div className={styles.info}>
+          <div className={styles.avatarWrapper}>
+            <Image
+              src={`https://cdn.paziresh24.com${doctor.image}`}
+              alt="avatar"
+              className={styles.avatar}
+              width={80}
+              height={80}
+            />
+            <div className={styles.registered}>
+              <Registered />
+            </div>
+          </div>
+          <div className={styles.descWrapper}>
+            <h3> {doctor.name} </h3>
+            <h5> {doctor.brief} </h5>
+            <div className={styles.comment}>
+              <Star />
+              <span>{doctor.averageRating.toFixed(2)}</span>
+              <span>
+                (<span>{doctor.totalVotes}</span> نظر)
+              </span>
+            </div>
           </div>
         </div>
-        <div className={styles.descWrapper}>
-          <div> {doctor.name} </div>
-          <div> {doctor.brief} </div>
-          <div className={styles.comment}>
-            <Star />
-            <span>{doctor.averageRating.toFixed(2)}</span>
-            <span>
-              (<span>{doctor.totalVotes}</span> نظر)
-            </span>
+        <div className={styles.address}>
+          <Location />
+          <div>
+            <span>{doctor.address} </span>
           </div>
         </div>
-      </div>
-      <div className={styles.address}>
-        <Location />
-        <div>
-          <span>{doctor.address} </span>
-        </div>
-      </div>
-      <div className={styles.wrapperTags}>
-        {doctor.badges
-          ? doctor.badges.map((badge, _i) => (
+        <div className={styles.wrapperTags}>
+          {doctor.badges
+            ? doctor.badges.map((badge, _i) => (
               <div key={_i} className={styles.trait}>
                 {showBadge(badge)}
                 <span> {badge}</span>
               </div>
             ))
-          : null}
+            : null}
+        </div>
       </div>
-      <Link href={`/doctor/${doctor.id}`} className={styles.turn}>
-        گرفتن نوبت
-      </Link>
+      <div className={styles.wrapperTurn}>
+        <Link href={`/doctor/${doctor.id}`} className={styles.turn}>
+          گرفتن نوبت
+        </Link>
+      </div>
     </div>
   );
 }

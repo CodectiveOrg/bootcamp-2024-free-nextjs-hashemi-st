@@ -29,8 +29,9 @@
 
 .viButton {
   background-color: var(--color-primary);
-  color: var(--color-primary-fade);
+  font-weight: 600;
+  color: var(--color-gray-20);
   &:hover {
-    color: var(--color-gray-20);
+    color: var(--color-primary-fade);
   }
 }
