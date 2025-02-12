@@ -3,7 +3,7 @@
   padding: 0.75rem;
   border-bottom: 1px solid var(--color-primary-middle);
   border-radius: 0.5rem;
-  
+
   .wrapperInfo {
     display: flex;
     align-items: center;

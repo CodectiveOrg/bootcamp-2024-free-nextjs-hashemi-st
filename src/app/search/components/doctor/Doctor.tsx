@@ -50,11 +50,11 @@ export default function Doctor({ doctor }: ItemProps): ReactElement {
         <div className={styles.wrapperTags}>
           {doctor.badges
             ? doctor.badges.map((badge, _i) => (
-              <div key={_i} className={styles.trait}>
-                {showBadge(badge)}
-                <span> {badge}</span>
-              </div>
-            ))
+                <div key={_i} className={styles.trait}>
+                  {showBadge(badge)}
+                  <span> {badge}</span>
+                </div>
+              ))
             : null}
         </div>
       </div>

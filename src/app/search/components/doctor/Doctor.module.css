@@ -38,7 +38,7 @@
 
     .descWrapper {
       h5 {
-        color: var(--color-gray-40)
+        color: var(--color-gray-40);
       }
 
       .comment {
@@ -122,7 +122,6 @@
 
 @media (max-width: 680px) {
   .item {
-
     flex-direction: column;
 
     .turn {

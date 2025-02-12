@@ -23,7 +23,7 @@
     flex-direction: column;
 
     .filters {
-      flex: 1
+      flex: 1;
     }
   }
 }

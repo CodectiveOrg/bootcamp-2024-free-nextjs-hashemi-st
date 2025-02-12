@@ -20,11 +20,11 @@
     gap: 1rem;
     color: var(--color-gray-40);
 
-    >ul {
+    > ul {
       display: flex;
       gap: 1rem;
 
-      >li {
+      > li {
         background-color: var(--color-gray-99);
         padding: 0.25rem 0.75rem;
         font-size: var(--fz-200);

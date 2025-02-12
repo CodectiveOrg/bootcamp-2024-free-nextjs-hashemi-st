@@ -9,13 +9,14 @@ import styles from "./FilterCity.module.css";
 type Props = {
   filters: FiltersType;
   handleFilterChange: (
-    event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
-    key: keyof FiltersType
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>,
+    key: keyof FiltersType,
   ) => void;
 };
 
 export default function FilterCity({ filters, handleFilterChange }: Props) {
-
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(filters.city || "");
 
@@ -29,7 +30,10 @@ export default function FilterCity({ filters, handleFilterChange }: Props) {
 
   const handleCitySelect = (city: string) => {
     setSelected(city);
-    handleFilterChange({ target: { value: city } } as React.ChangeEvent<HTMLSelectElement>, "city");
+    handleFilterChange(
+      { target: { value: city } } as React.ChangeEvent<HTMLSelectElement>,
+      "city",
+    );
     setIsOpen(false);
   };
 
@@ -40,7 +44,7 @@ export default function FilterCity({ filters, handleFilterChange }: Props) {
         <button
           className={`${styles.dropdownButton} ${isOpen ? styles.open : ""}`}
           onClick={() => {
-            setIsOpen(!isOpen)
+            setIsOpen(!isOpen);
           }}
         >
           {selected || "همه شهرها"}

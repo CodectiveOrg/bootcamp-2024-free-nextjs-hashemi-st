@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl" >
+    <html lang="fa" dir="rtl">
       <head>
         <link
           href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
@@ -26,11 +26,9 @@ export default function RootLayout({
       </head>
       <body>
         <HeaderComponent />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <p className="tagline">
-         نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
+          نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
         </p>
         <FooterComponent />
       </body>

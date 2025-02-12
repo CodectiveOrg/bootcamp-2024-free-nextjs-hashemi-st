@@ -3,12 +3,12 @@
   margin-bottom: 1.25rem;
   background-color: var(--color-gray-99);
   box-shadow: var(--shadow-400);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .wrapperCity h4 {
   background-color: var(--color-gray-80);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin-bottom: 1rem;
   padding: 0.25rem;
 }

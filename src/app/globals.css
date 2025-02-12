@@ -27,7 +27,7 @@
   --color-primary-opposite: var(--color-gray-99);
 
   --color-danger: hsl(10deg 80% 48%);
-  --color-success:  hsl(160deg 50% 50%);
+  --color-success: hsl(160deg 50% 50%);
   --color-danger-fade: hsl(10deg 80% 96%);
   --color-danger-lighter: hsl(10deg 80% 52%);
   --color-danger-darker: hsl(10deg 80% 44%);
@@ -131,4 +131,3 @@ body {
     cursor: pointer;
   }
 }
-

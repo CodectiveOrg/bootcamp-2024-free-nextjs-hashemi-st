@@ -48,7 +48,7 @@ export default function Selected() {
             {filters.rating}
           </li>
         )}
-        {(filters.city && filters.city !== "همه شهرها") && (
+        {filters.city && filters.city !== "همه شهرها" && (
           <li
             className={styles.labelFilter}
             onClick={() => filterClickHandler("city")}
