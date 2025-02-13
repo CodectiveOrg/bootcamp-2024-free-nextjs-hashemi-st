@@ -1,5 +1,9 @@
 .title {
   margin-bottom: 0.625rem;
+  background-color: var(--color-gray-80);
+  color: var(--color-gray-20);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
 }
 .filterLabel {
   display: inline-flex;

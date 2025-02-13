@@ -1,0 +1,10 @@
+.wrapper {
+  border: 1px solid var(--color-gray-90);
+  background-color: var(--color-gray-99);
+  box-shadow: var(--shadow-500);
+  padding: var(--full-width-padding-inline);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}

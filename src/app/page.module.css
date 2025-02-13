@@ -7,14 +7,9 @@
   min-block-size: 100%;
 
   h1 {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-
-    font-size: var(--fz-600);
-
     svg {
-      font-size: 1.5em;
+      height: 4rem;
+      margin-inline-end: 1rem;
     }
   }
 
@@ -23,19 +18,24 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
-    color: var(--color-gray-80);
+    color: var(--color-gray-40);
 
     > ul {
       display: flex;
       gap: 1rem;
 
       > li {
-        background-color: var(--color-gray-20);
-
+        background-color: var(--color-gray-99);
         padding: 0.25rem 0.75rem;
-
+        font-size: var(--fz-200);
         border-radius: 999rem;
+        cursor: pointer;
       }
     }
+  }
+}
+@media (max-width: 680px) {
+  .history {
+    flex-direction: column;
   }
 }

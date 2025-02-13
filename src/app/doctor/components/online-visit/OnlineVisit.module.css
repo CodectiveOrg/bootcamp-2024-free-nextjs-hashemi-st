@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--color-primary-middle);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.chat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+
+  span {
+    margin-left: 0.25rem;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.viButton {
+  background-color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-gray-20);
+  &:hover {
+    color: var(--color-primary-fade);
+  }
+}

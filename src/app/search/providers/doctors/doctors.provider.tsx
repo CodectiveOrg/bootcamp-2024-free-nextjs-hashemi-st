@@ -84,6 +84,9 @@ function doesInclude(
   if (!query) {
     return true;
   }
+  if (query === "همه شهرها") {
+    return true;
+  }
 
   if (exact) {
     return item.toLowerCase() === query.toLowerCase();

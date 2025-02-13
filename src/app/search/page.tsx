@@ -1,12 +1,12 @@
 "use client";
+import { ReactElement } from "react";
+import { doctors } from "@/models/doctors";
 import DoctorList from "@/app/search/components/doctor-list/DotorList";
 import Filters from "./components/filters/Filters";
 import FiltersProvider from "./providers/filters/filters.providers";
 import DoctorsProvider from "./providers/doctors/doctors.provider";
-import styles from "./page.module.css";
-import { doctors } from "@/models/doctors";
-import { ReactElement } from "react";
 import { FiltersType } from "./types/filters.type";
+import styles from "./page.module.css";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 type Props = {

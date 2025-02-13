@@ -1,3 +1,14 @@
+import { StaticImageData } from "next/image";
+export type Comments = {
+  user: string;
+  image: StaticImageData;
+  comment: string;
+  date: string;
+  visited: boolean;
+  answer: string;
+  point: number;
+};
+
 export type DoctorModel = {
   id: string;
   name: string;
@@ -13,4 +24,8 @@ export type DoctorModel = {
   degree: string;
   expertise: string;
   city: string;
+  code: number;
+  experience: number;
+  phone: string;
+  comments: Comments[];
 };

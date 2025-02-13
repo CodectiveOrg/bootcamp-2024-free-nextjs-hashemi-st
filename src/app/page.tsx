@@ -8,11 +8,11 @@ export default async function Home() {
     <div className={styles.home}>
       <h1>
         <Logo />
-        چکاپ &nbsp;فایند
+        چکاپ‌فایند
       </h1>
       <GlobalSearchBoxComponent />
       <div className={styles.history}>
-        <div className={styles.title}>آخرین جستجوهای شما</div>
+        <h4 className={styles.title}>آخرین جستجوهای شما</h4>
         <ul>
           <li>ارتوپد</li>
           <li>قلب و عروق</li>

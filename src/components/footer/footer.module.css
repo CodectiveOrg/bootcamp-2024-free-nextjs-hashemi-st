@@ -13,8 +13,7 @@
 
     .logo {
       margin-block-end: 0.25rem;
-
-      font-size: 2rem;
+      font-size: var(--fz-700);
       font-weight: 700;
     }
   }
@@ -34,6 +33,7 @@
     .socials {
       display: flex;
       gap: 1rem;
+      color: var(--color-gray-40);
 
       > li {
         a {
@@ -45,7 +45,7 @@
 
   .copy {
     grid-area: copy;
-
     text-align: center;
+    font-size: var(--fz-300);
   }
 }

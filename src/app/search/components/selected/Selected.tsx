@@ -1,6 +1,7 @@
 import { useContext, useMemo } from "react";
 import { FiltersContext } from "../../providers/filters/filters.providers";
 import { FiltersType } from "../../types/filters.type";
+
 import styles from "./Selected.module.css";
 
 export default function Selected() {
@@ -12,7 +13,7 @@ export default function Selected() {
       !filters.expertise &&
       !filters.gender &&
       !filters.degree &&
-      !filters.city &&
+      (!filters.city || filters.city === "همه شهرها") &&
       !filters.badges
     );
   }, [filters]);
@@ -47,7 +48,7 @@ export default function Selected() {
             {filters.rating}
           </li>
         )}
-        {filters.city && (
+        {filters.city && filters.city !== "همه شهرها" && (
           <li
             className={styles.labelFilter}
             onClick={() => filterClickHandler("city")}

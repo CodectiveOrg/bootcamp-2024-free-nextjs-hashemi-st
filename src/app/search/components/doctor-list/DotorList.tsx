@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DoctorsContext } from "@/app/search/providers/doctors/doctors.provider";
 import Doctor from "../doctor/Doctor";
+
 import styles from "./DoctorList.module.css";
 
 export default function DoctorList() {
@@ -9,7 +10,7 @@ export default function DoctorList() {
   if (filteredDoctors.length === 0) {
     return (
       <div className={styles.emptyList}>
-        <h3>متاسفانه هیچ دکتری با تخصص موردنظر یافت نشد.</h3>
+        <h3>متاسفانه دکتری یافت نشد.</h3>
       </div>
     );
   }
