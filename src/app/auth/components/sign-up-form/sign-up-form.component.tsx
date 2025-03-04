@@ -16,7 +16,7 @@ import MingcuteIncognitoModeLine from "@/icons/MingcuteIncognitoModeLine";
 import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import MingcuteMailLine from "@/icons/MingcuteMailLine";
 
-import styles from "@/app/auth/styles/auth-form.module.css";
+import styles from "@/app/auth/components/styles/auth-form.module.css";
 
 export default function SignUpFormComponent(): ReactElement {
   const formSubmitHandler = async (

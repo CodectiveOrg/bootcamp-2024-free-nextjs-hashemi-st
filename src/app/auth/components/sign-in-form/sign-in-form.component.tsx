@@ -14,7 +14,7 @@ import PasswordInputComponent from "../password-input/password-input.component";
 
 import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 
-import styles from "@/app/auth/styles/auth-form.module.css";
+import styles from "@/app/auth/components/styles/auth-form.module.css";
 
 export default function SignInFormComponent(): ReactElement {
   const formSubmitHandler = async (
