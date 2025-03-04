@@ -63,7 +63,7 @@ export default function SignUpFormComponent(): ReactElement {
             </div>
           </div>
           <div className={styles.visuals}>
-            <Image src={signUpImage} alt="" width="300" height="300"/>
+            <Image src={signUpImage} alt="" width="300" height="300" />
           </div>
         </div>
       </Card>

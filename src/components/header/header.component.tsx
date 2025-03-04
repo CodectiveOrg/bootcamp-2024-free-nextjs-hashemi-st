@@ -36,7 +36,9 @@ export default function HeaderComponent(): ReactElement {
           ))}
         </ul>
       </nav>
-      <Link href="/auth" className={styles.cta}>ورود | ثبت‌نام</Link>
+      <Link href="/auth" className={styles.cta}>
+        ورود | ثبت‌نام
+      </Link>
     </header>
   );
 }

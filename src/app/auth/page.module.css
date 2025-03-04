@@ -1,31 +1,30 @@
 .content {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 2rem auto;
-    background-color: var(--color-star-light);
-    padding: 1rem;
-    border-radius: .25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem auto;
+  background-color: var(--color-star-light);
+  padding: 1rem;
+  border-radius: 0.25rem;
 
-    .signinKeys {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        margin-top: 1rem;
-        gap: 1rem;
+  .signinKeys {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
 
-        a {
-            width: 100%;
-            display: block;
-            color: var(--color-gray-16);
-            padding: .25rem;
-            border-radius: .25rem;
-            background-color: var(--light-footer);
+    a {
+      width: 100%;
+      display: block;
+      color: var(--color-gray-16);
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      background-color: var(--light-footer);
 
-            &:hover {
-                background-color: var(--color-star-lighter);
-
-            }
-        }
+      &:hover {
+        background-color: var(--color-star-lighter);
+      }
     }
+  }
 }
