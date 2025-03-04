@@ -34,7 +34,9 @@
   --color-danger-opposite: var(--color-gray-99);
 
   --color-star: hsl(50deg 100% 50%);
-
+  --color-star-light: hsl(46.62,77.89%,77%);
+  --color-star-lighter: hsl(20.69,27.62%,79.41%);
+  
   --color-border: var(--color-gray-80);
 
   --light-footer: hsl(120, 47%, 97%);
@@ -126,7 +128,6 @@ body {
   button {
     border: none;
     border-radius: 0.25rem;
-    padding: 0.5rem;
     text-align: center;
     cursor: pointer;
   }

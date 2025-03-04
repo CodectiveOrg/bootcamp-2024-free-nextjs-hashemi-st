@@ -1,0 +1,52 @@
+.auth-form {
+  inline-size: min(50rem, 100%);
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .writings {
+      display: grid;
+      gap: 1rem;
+
+      form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .change-form {
+        a {
+          color: var(--color-danger);
+
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .visuals {
+      min-block-size: 100%;
+
+      img {
+        inline-size: 100%;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+      }
+    }
+  }
+}
+
+@media (max-width: 718px) {
+  .auth-form {
+    .card-content {
+      flex-direction: column-reverse;
+      align-items: normal;
+
+      .visuals {
+        img {
+          block-size: 100%;
+        }
+      }
+    }
+  }
+}
