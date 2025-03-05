@@ -6,9 +6,9 @@ import Image from "next/image";
 import certificateLogo from "@/assets/logo/certificate.svg";
 import enamadLogo from "@/assets/logo/enamad.svg";
 import idkLogo from "@/assets/logo/idk.svg";
-import MingcuteTelegramFill from "@/icones/MingcuteTelegramFill";
-import MingcuteLinkedinFill from "@/icones/MingcuteLinkedinFill";
-import MingcuteYoutubeFill from "@/icones/MingcuteYoutubeFill";
+import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
+import MingcuteLinkedinFill from "@/icons/MingcuteLinkedinFill";
+import MingcuteYoutubeFill from "@/icons/MingcuteYoutubeFill";
 
 import styles from "./footer.module.css";
 
