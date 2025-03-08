@@ -1,12 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import Card from "@/components/Card/Card";
-import login from "@/assets/images/login.webp";
+import login from "@/assets/images/Logo.png";
 import styles from "./page.module.css";
 
 export default function Auth() {
   return (
-    <Card>
       <div className={styles.content}>
         <div className={styles.pic}>
           <Image alt="login" src={login} />
@@ -16,6 +14,5 @@ export default function Auth() {
           <Link href="/auth/sign-up">ثبت نام</Link>
         </div>
       </div>
-    </Card>
   );
 }

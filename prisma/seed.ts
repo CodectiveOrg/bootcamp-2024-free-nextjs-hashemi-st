@@ -4,9 +4,9 @@ const prisma = new PrismaClient();
 
 const users: Prisma.UserCreateInput[] = [
   {
-    name: "بیژن عیسی پور",
-    username: "BijanProgrammer",
-    email: "bijan@gmail.com",
+    name: "محمد کریمی ",
+    username: "Mohammad",
+    email: "mohammad_karimi@gmail.com",
     password: "1234",
   },
 ];
