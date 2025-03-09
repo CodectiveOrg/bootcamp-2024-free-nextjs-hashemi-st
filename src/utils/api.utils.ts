@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 type ParseBodyResult<T> = [error: null, data: T] | [error: string, data: null];
 
 export async function parseBody<T>(
-  request: Request
+  request: Request,
 ): Promise<ParseBodyResult<T>> {
   try {
     const body = await request.json();
@@ -24,27 +24,26 @@ export async function parseBody<T>(
 }
 
 export async function tryCatch<T>(
-  callback: () => Promise<ApiResponseType<T>>
+  callback: () => Promise<ApiResponseType<T>>,
 ): Promise<ApiResponseType<T>> {
   try {
     return await callback();
-  } catch (error) { 
-   
+  } catch (error) {
     if (error instanceof Error) {
-      console.log('name',error.name)
+      console.log("name", error.name);
       if (error.name === "PrismaClientValidationError") {
         return NextResponse.json(
           { error: "همه پارامترهای مورد نیاز پاس داده نشده است." },
-          { status: 400 }
+          { status: 400 },
         );
       }
       if (error.name === "PrismaClientInitializationError") {
         return NextResponse.json(
           { error: "متاسفانه ارتباط با دیتابیس برقرار نشد." },
-          { status: 400 }
+          { status: 400 },
         );
       }
-      
+
       return NextResponse.json({ error: error.message }, { status: 400 });
     }
 
