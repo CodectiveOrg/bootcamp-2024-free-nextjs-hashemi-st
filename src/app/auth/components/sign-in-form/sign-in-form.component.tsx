@@ -21,30 +21,34 @@ import styles from "@/app/auth/components/styles/auth-form.module.css";
 
 export default function SignInFormComponent(): ReactElement {
   const formRef = useRef<HTMLFormElement>(null);
-  const router = useRouter()
+  const router = useRouter();
 
-  const formSubmitHandler = async (   
+  const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     e.preventDefault();
 
-    const newUser = new FormData(e.currentTarget)
+    const newUser = new FormData(e.currentTarget);
 
     const dto: signInDto = {
       username: newUser.get("username") as string,
-      password: newUser.get("password") as string
-    }
+      password: newUser.get("password") as string,
+    };
 
-    const response = await fetchWithToast<null>("/api/auth/sign-in", {
-      method: "POST",
-      body: JSON.stringify(dto)
-    }, "خوش آمدید!")
+    const response = await fetchWithToast<null>(
+      "/api/auth/sign-in",
+      {
+        method: "POST",
+        body: JSON.stringify(dto),
+      },
+      "خوش آمدید!",
+    );
 
     if (response.error) {
-      return
+      return;
     }
-    formRef.current?.reset()
-    router.push("/dashboard")
+    formRef.current?.reset();
+    router.push("/dashboard");
   };
   return (
     <div className={styles["auth-form"]}>

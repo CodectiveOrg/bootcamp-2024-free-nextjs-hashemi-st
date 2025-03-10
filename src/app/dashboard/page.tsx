@@ -9,17 +9,21 @@ import { fetchWithToast } from "@/utils/fetch.utils";
 import styles from "./page.module.css";
 
 export default function Page(): ReactElement {
-  const router = useRouter()
+  const router = useRouter();
 
   const signOutButtonClickHandler = async (): Promise<void> => {
-        const response = await fetchWithToast<null>("/api/auth/sign-out", {
-          method: "POST",
-        }, "به امید دیدار")
-    
-        if (response.error) {
-          return
-        }
-        router.push("/ ")
+    const response = await fetchWithToast<null>(
+      "/api/auth/sign-out",
+      {
+        method: "POST",
+      },
+      "به امید دیدار",
+    );
+
+    if (response.error) {
+      return;
+    }
+    router.push("/ ");
   };
 
   return (

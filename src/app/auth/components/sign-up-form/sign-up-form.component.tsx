@@ -20,34 +20,37 @@ import MingcuteMailLine from "@/icons/MingcuteMailLine";
 import styles from "@/app/auth/components/styles/auth-form.module.css";
 
 export default function SignUpFormComponent(): ReactElement {
-
-  const formRef = useRef<HTMLFormElement>(null)
-  const router = useRouter()
+  const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     e.preventDefault();
 
-    const newUser = new FormData(e.currentTarget)
+    const newUser = new FormData(e.currentTarget);
 
     const dto: signupDto = {
       name: newUser.get("name") as string,
       username: newUser.get("username") as string,
       email: newUser.get("email") as string,
-      password: newUser.get("password") as string
-    }
+      password: newUser.get("password") as string,
+    };
 
-    const response = await fetchWithToast<null>("/api/auth/sign-up", {
-      method: "POST",
-      body: JSON.stringify(dto)
-    }, "ثبت‌نام با موفقیت انجام شد")
+    const response = await fetchWithToast<null>(
+      "/api/auth/sign-up",
+      {
+        method: "POST",
+        body: JSON.stringify(dto),
+      },
+      "ثبت‌نام با موفقیت انجام شد",
+    );
 
     if (response.error) {
-      return
+      return;
     }
-    formRef.current?.reset()
-    router.push("/dashboard")
+    formRef.current?.reset();
+    router.push("/dashboard");
   };
 
   return (

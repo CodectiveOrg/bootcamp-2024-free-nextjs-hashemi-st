@@ -6,7 +6,7 @@ import { ApiResponseType } from "@/types/api-response.type";
 import { signupDto } from "@/dto/auth.dto";
 
 export async function POST(
-  request: NextRequest
+  request: NextRequest,
 ): Promise<ApiResponseType<null>> {
   return tryCatch(async () => {
     const [ParseError, body] = await parseBody<signupDto>(request);
@@ -24,20 +24,20 @@ export async function POST(
     if (username) {
       return NextResponse.json(
         { error: "نام کاربری تکراری است" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (email) {
       return NextResponse.json(
         { error: "ایمیل وارد شده تکراری است" },
-        { status: 400 }
+        { status: 400 },
       );
     }
-    
+
     await setUserCookie();
-    const hashedPassword = await hashPassword(body.password)
-    await prisma.user.create({ data: {...body, password: hashedPassword} });
+    const hashedPassword = await hashPassword(body.password);
+    await prisma.user.create({ data: { ...body, password: hashedPassword } });
     return NextResponse.json({ data: null, status: 201 });
   });
 }

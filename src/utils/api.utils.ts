@@ -9,7 +9,7 @@ const alg = "HS256";
 const secret = new TextEncoder().encode(process.env.TOKEN_SECRET);
 
 export async function parseBody<T>(
-  request: Request
+  request: Request,
 ): Promise<ParseBodyResult<T>> {
   try {
     const body = await request.json();
@@ -29,7 +29,7 @@ export async function parseBody<T>(
 }
 
 export async function tryCatch<T>(
-  callback: () => Promise<ApiResponseType<T>>
+  callback: () => Promise<ApiResponseType<T>>,
 ): Promise<ApiResponseType<T>> {
   try {
     return await callback();
@@ -39,13 +39,13 @@ export async function tryCatch<T>(
       if (error.name === "PrismaClientValidationError") {
         return NextResponse.json(
           { error: "همه پارامترهای مورد نیاز پاس داده نشده است." },
-          { status: 400 }
+          { status: 400 },
         );
       }
       if (error.name === "PrismaClientInitializationError") {
         return NextResponse.json(
           { error: "متاسفانه ارتباط با دیتابیس برقرار نشد." },
-          { status: 400 }
+          { status: 400 },
         );
       }
 
@@ -90,5 +90,5 @@ export async function isSignedIn(request: NextRequest): Promise<boolean> {
 export async function removeCookie(): Promise<void> {
   const cookieStore = cookies();
 
-  cookieStore.delete(process.env.TOKEN_KEY!)
+  cookieStore.delete(process.env.TOKEN_KEY!);
 }

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 export async function fetchWithToast<T>(
   input: RequestInfo | URL,
   init: RequestInit = {},
-  successMessage?: string
+  successMessage?: string,
 ): Promise<FetchDataType<T>> {
   const response = await fetch(input, {
     headers: { "Content-Type": "application/json" },
