@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import { tryCatch, parseBody, setUserCookie } from "@/utils/api.utils";
+import { hashPassword } from "@/utils/bcrypt.utils";
 import { ApiResponseType } from "@/types/api-response.type";
 import { signupDto } from "@/dto/auth.dto";
 
@@ -35,7 +36,8 @@ export async function POST(
     }
     
     await setUserCookie();
-    await prisma.user.create({ data: body });
+    const hashedPassword = await hashPassword(body.password)
+    await prisma.user.create({ data: {...body, password: hashedPassword} });
     return NextResponse.json({ data: null, status: 201 });
   });
 }

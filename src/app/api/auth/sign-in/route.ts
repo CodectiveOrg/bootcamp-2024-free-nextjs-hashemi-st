@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import { tryCatch, parseBody, setUserCookie } from "@/utils/api.utils";
+import { comparePassword } from "@/utils/bcrypt.utils";
 import { ApiResponseType } from "@/types/api-response.type";
 import { signInDto } from "@/dto/auth.dto";
 
@@ -24,7 +25,7 @@ export async function POST(
       );
     }
 
-    if(user.password !== body.password) {
+    if(!(await comparePassword( body.password, user.password)) ) {
       return NextResponse.json(
         { error: "رمز وارد شده صحیح نمی باشد" },
         { status: 401 }
