@@ -3,6 +3,7 @@
 import { ReactElement, FormEvent, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import signUpImage from "@/assets/images/sign-up.webp";
 import Card from "@/components/Card/Card";
@@ -21,6 +22,7 @@ import styles from "@/app/auth/components/styles/auth-form.module.css";
 export default function SignUpFormComponent(): ReactElement {
 
   const formRef = useRef<HTMLFormElement>(null)
+  const router = useRouter()
 
   const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
@@ -45,6 +47,7 @@ export default function SignUpFormComponent(): ReactElement {
       return
     }
     formRef.current?.reset()
+    router.push("/dashboard")
   };
 
   return (

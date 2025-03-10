@@ -4,6 +4,7 @@ import { FormEvent, ReactElement, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import signInImage from "@/assets/images/sign-in.webp";
 
@@ -19,9 +20,10 @@ import { signInDto } from "@/dto/auth.dto";
 import styles from "@/app/auth/components/styles/auth-form.module.css";
 
 export default function SignInFormComponent(): ReactElement {
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter()
 
-  const formSubmitHandler = async (
+  const formSubmitHandler = async (   
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     e.preventDefault();
@@ -42,6 +44,7 @@ export default function SignInFormComponent(): ReactElement {
       return
     }
     formRef.current?.reset()
+    router.push("/dashboard")
   };
   return (
     <div className={styles["auth-form"]}>

@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
-import { tryCatch, parseBody } from "@/utils/api.utils";
+import { tryCatch, parseBody, setUserCookie } from "@/utils/api.utils";
 import { ApiResponseType } from "@/types/api-response.type";
 import { signInDto } from "@/dto/auth.dto";
 
@@ -30,6 +30,8 @@ export async function POST(
         { status: 401 }
       );
     }
+    
+    await setUserCookie()
 
     return NextResponse.json({ data: null, status: 200 });
   });
