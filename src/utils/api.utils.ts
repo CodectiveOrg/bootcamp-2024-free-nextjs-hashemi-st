@@ -1,6 +1,6 @@
 import { ApiResponseType } from "@/types/api-response.type";
 import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import * as jose from "jose";
 
 type ParseBodyResult<T> = [error: null, data: T] | [error: string, data: null];
@@ -59,15 +59,30 @@ export async function tryCatch<T>(
 export async function setUserCookie(): Promise<void> {
   const cookieStore = cookies();
   const token = await new jose.SignJWT()
-    .setProtectedHeader({alg})
+    .setProtectedHeader({ alg })
     .setIssuedAt()
     .setExpirationTime("3d")
     .sign(secret);
 
-    cookieStore.set(process.env.TOKEN_KEY!, token, {
-      secure: true,
-      httpOnly: true,
-      sameSite:'none',
-      maxAge: 3 * 24 * 3600
-    })
+  cookieStore.set(process.env.TOKEN_KEY!, token, {
+    secure: true,
+    httpOnly: true,
+    sameSite: "none",
+    maxAge: 3 * 24 * 3600,
+  });
+}
+
+export async function isSignedIn(request: NextRequest): Promise<boolean> {
+  const token = request.cookies.get(process.env.TOKEN_KEY!)?.value;
+
+  if (!token) {
+    return false;
+  }
+  try {
+    await jose.jwtVerify(token, secret);
+    return true;
+  } catch (e) {
+    console.log(e);
+    return false;
+  }
 }
