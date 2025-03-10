@@ -86,3 +86,9 @@ export async function isSignedIn(request: NextRequest): Promise<boolean> {
     return false;
   }
 }
+
+export async function removeCookie(): Promise<void> {
+  const cookieStore = cookies();
+
+  cookieStore.delete(process.env.TOKEN_KEY!)
+}
