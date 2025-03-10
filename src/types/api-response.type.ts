@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-type FetchDataType<DataResponse> =
+export type FetchDataType<DataResponse> =
   | { data: DataResponse; error?: undefined }
   | { data?: undefined; error: string };
 

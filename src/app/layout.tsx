@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeaderComponent from "@/components/header/header.component";
 import FooterComponent from "@/components/footer/footer.component";
+import ToastComponent from "@/components/toast/toast.component";
 
 import "@/styles/typography.css";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
           نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
         </p>
         <FooterComponent />
+        <ToastComponent />
       </body>
     </html>
   );
