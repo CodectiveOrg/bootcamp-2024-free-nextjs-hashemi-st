@@ -7,7 +7,7 @@ import { signupDto } from "@/dto/auth.dto";
 export async function POST(
   request: NextRequest
 ): Promise<ApiResponseType<null>> {
-  return tryCatch(async () => {
+  return tryCatch( async () => {
     const [ParseError, body] = await parseBody<signupDto>(request);
     if (ParseError !== null) {
       return NextResponse.json({ error: ParseError }, { status: 400 });
@@ -20,18 +20,18 @@ export async function POST(
       where: { email: body.email },
     });
 
-    if (username) {
-      return NextResponse.json({ 
-        error: "نام کاربری تکراری است",
-        status: 400 
-      });
+    if(username) {
+      return NextResponse.json(
+        { error: "نام کاربری تکراری است" },
+        { status: 400 }
+      );
     }
 
-    if (email) {
-      return NextResponse.json({
-        error: "ایمیل وارد شده  تکراری است",
-        status: 400,
-      });
+    if(email) {
+      return NextResponse.json(
+        { error: "ایمیل وارد شده تکراری است" },
+        { status: 400 }
+      );
     }
 
     await prisma.user.create({ data: body });

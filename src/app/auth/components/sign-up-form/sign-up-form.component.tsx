@@ -17,12 +17,38 @@ import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import MingcuteMailLine from "@/icons/MingcuteMailLine";
 
 import styles from "@/app/auth/components/styles/auth-form.module.css";
+import { signupDto } from "@/dto/auth.dto";
 
 export default function SignUpFormComponent(): ReactElement {
-  const formSubmitHandler = async (
+ const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     e.preventDefault();
+    
+    const newUser = new FormData(e.currentTarget)
+
+    const dto: signupDto = {
+      name: newUser.get("name") as string,
+      username: newUser.get("username") as string,
+      email: newUser.get("email") as string,
+      password: newUser.get("password") as string
+    }
+
+    const response = await fetch("/api/auth/sign-up", {
+      method: "POST",
+      body: JSON.stringify(dto)
+    })
+
+    const result = await response.json()
+    if (!response.ok) {
+      let message: string = "خطای عیر منتظره"
+      if ("error" in result) {
+        message = result.error;
+      }
+      console.log(message)
+      return
+    }
+    console.log("ثبت نام انجام شد.")
   };
 
   return (

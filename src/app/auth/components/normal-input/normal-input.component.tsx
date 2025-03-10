@@ -24,7 +24,8 @@ function NormalInputComponent(
   }: Props,
   ref: ForwardedRef<HTMLInputElement>,
 ): ReactElement {
-  return (
+
+    return (
     <label className={clsx(styles["normal-input"], className)}>
       <div className={styles["label-text"]}>{label}</div>
       <div className={styles.box}>
