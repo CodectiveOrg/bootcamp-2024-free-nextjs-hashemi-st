@@ -2,9 +2,12 @@
   display: grid;
   grid-template-columns: 1fr;
   margin: 2rem auto;
-  background-color: var(--color-star-light);
-  padding: 1rem;
+  background-color: var(--color-gray-97);
+  box-shadow: var(--shadow-500);
+  padding: var(--full-width-padding-inline);
   border-radius: 0.25rem;
+  text-align: center;
+  width: fit-content;
 
   .signinKeys {
     text-align: center;
@@ -17,14 +20,26 @@
     a {
       width: 100%;
       display: block;
-      color: var(--color-gray-16);
+      color: var(--color-text-700);
       padding: 0.25rem;
       border-radius: 0.25rem;
-      background-color: var(--light-footer);
+      border: 1px solid var(--color-text-700);
+      font-weight: 500;
 
       &:hover {
-        background-color: var(--color-star-lighter);
+        background-color: var(--color-primary);
+        color: var(--color-text-400);
       }
+    }
+  }
+
+  .pic {
+    padding: var(--full-width-padding-inline);
+    box-shadow: var(--shadow-500);
+
+    img {
+      max-width: 250px;
+      max-height: 250px;
     }
   }
 }
