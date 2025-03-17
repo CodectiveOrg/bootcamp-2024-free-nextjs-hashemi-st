@@ -9,9 +9,9 @@ export async function POST(
   request: NextRequest,
 ): Promise<ApiResponseType<null>> {
   return tryCatch(async () => {
-    const [ParseError, body] = await parseBody<signInDto>(request);
-    if (ParseError !== null) {
-      return NextResponse.json({ error: ParseError }, { status: 400 });
+    const [parseError, body] = await parseBody<signInDto>(request);
+    if (parseError !== null) {
+      return NextResponse.json({ error: parseError }, { status: 400 });
     }
 
     const user = await prisma.user.findUnique({
