@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
+import Link from "next/link";
 
 import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
-import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
 import styles from "./global-search-box.module.css";
 
@@ -11,17 +11,13 @@ export default function GlobalSearchBoxComponent(): ReactElement {
       <div className={styles.prefix}>
         <MingcuteSearchLine />
       </div>
-      <input
-        type="text"
-        placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
-      />
-      <div className={styles.divider}></div>
-      <div className={styles.suffix}>
-        <button>
-          <MingcuteLocationLine />
-          همه شهرها
-        </button>
-      </div>
+      <Link href="/search" style={{ width: "100%" }}>
+        <input
+          type="text"
+          placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
+          style={{ width: "100%" }}
+        />
+      </Link>
     </div>
   );
 }
